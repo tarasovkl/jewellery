@@ -1,3 +1,163 @@
 .filter {
-  width: 250px;
+  margin-right: 50px;
+}
+
+.filter [type="checkbox"] {
+  display: none;
+}
+
+.filter form {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter li {
+  padding: 0 25px;
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  border: 1px solid #a87b62;
+  padding-top: 28px;
+  margin-top: -1px;
+}
+
+.filter__title p {
+  margin-top: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+.filter label {
+  display: block;
+  width: 140px;
+  padding-left: 32px;
+  margin-bottom: 18px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #a87b62;
+    left: 7px;
+  }
+}
+
+.filter input:checked + label::before {
+  width: 15px;
+  height: 15px;
+  left: 7px;
+  border: 1px solid #a87b62;
+  background: #a87b62;
+}
+
+.filter__button {
+  width: 15px;
+  height: 15px;
+  content: "";
+  border: none;
+  background: url("../img/arrow_down.svg") center no-repeat;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.filter__button--active {
+  background: url("../img/arrow_up.svg") center no-repeat;
+}
+
+.filter__title {
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.filter [type="submit"] {
+  width: 100%;
+  height: 68px;
+  background: #a87b62;
+  border: none;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter [type="reset"] {
+  width: 100%;
+  height: 68px;
+  border: 1px solid #a87b62;
+  background: none;
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $text-color;
+  cursor: pointer;
+}
+
+.filter__scale {
+  width: 200px;
+  height: 0px;
+  border: 1px solid #f0eae4;
+}
+.filter__bar {
+  width: 90px;
+  height: 0px;
+  border: 1px solid #a87b62;
+  margin-left: 30%;
+}
+.filter__toggle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #a87b62;
+}
+
+.filter__controls {
+  position: relative;
+}
+
+.filter__toggle--min {
+  position: absolute;
+  left: 54px;
+  top: -6px;
+}
+.filter__toggle--max {
+  position: absolute;
+  left: 142px;
+  top: -6px;
+}
+
+.filter__price {
+  margin-top: 17px;
+  margin-bottom: 23px;
+  margin-left: 45px;
+}
+
+.filter__price span {
+
+  &:last-child {
+    margin-left: 50px;
+  }
 }

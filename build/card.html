@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Каталог Jewellery">
-  <title>Jewellery каталог</title>
+  <title>Jewellery Card</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -53,168 +53,89 @@
         </ul>
       </nav>
     </div>
-    <div class="header__image header__image-catalog">
-      <h2 class="header__image-title">ALL JEWELLERY</h2>
-      <p class="header__image-text">Discover picks of fashion's finest trends in our jewellery catalog</p>
-    </div>
   </header>
-  <main class="container container-catalog">
-    <div class="filter">
-      <form action="">
-        <ul>
-          <li>
-            <div class="filter__title">
-              <p>Product</p>
-              <button class="filter__button filter__button--active">Показать</button>
-            </div>
-            <input type="checkbox" name="option" id="necklace" checked="">
-            <label for="necklace">Necklaces</label>
-            <input type="checkbox" name="option" id="Choker" checked="">
-            <label for="Choker">Chokers</label>
-            <input type="checkbox" name="option" id="Ring">
-            <label for="Ring">Rings</label>
-            <input type="checkbox" name="option" id="Earrings" checked="">
-            <label for="Earrings">Earrings</label>
-          </li>
-          <li>
-            <div class="filter__title">
-              <p>Material</p>
-              <button class="filter__button">Показать</button>
-            </div>
-            <input type="checkbox" name="option" id="gold" checked="">
-            <label for="gold">Gold</label>
-            <input type="checkbox" name="option" id="silver" checked="">
-            <label for="silver">Silver</label>
-          </li>
-          <li>
-            <div class="filter__title">
-              <p>Collection</p>
-              <button class="filter__button">Показать</button>
-            </div>
-            <input type="checkbox" name="option" id="pink" checked="">
-            <label for="pink">Pink flamingo</label>
-            <input type="checkbox" name="option" id="dreams" checked="">
-            <label for="dreams">Dreams</label>
-          </li>
-          <li>
-            <div class="filter__title">
-              <p>Price</p>
-              <button class="filter__button filter__button--active">Показать</button>
-            </div>
-            <div class="filter__controls">
-              <div class="filter__scale">
-                <div class="filter__bar"></div>
-              </div>
-              <div class="filter__toggle filter__toggle--min" aria-label="Минимум"></div>
-              <div class="filter__toggle filter__toggle--max" aria-label="Максимум"></div>
-              <div class="filter__price">
-                <span>$ 55</span>
-                <span>$ 155</span>
-              </div>
-            </div>
-          </li>
+  <main class="container">
+    <section class="card">
+      <div class="card__images">
+        <div class="card__images-block">
+          <img src="img/card_img1_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+          <img src="img/card_img2_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+          <img src="img/card_img3_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+        </div>
+        <div class="card__images-block">
+          <img src="img/card_img4_desktop@1x.jpg" width="470" height="435" alt="Контентное изображение">
+        </div>
+      </div>
+      <div class="card__info">
+        <h3>Gold Necklace </h3>
+        <p>$ 115</p>
+        <div class="card__info-additional">
+          <button class="card__button">Description</button>
+          <button class="card__button card__active">Additional info</button>
+        </div>
+        <div class="card__data">
+          <ul class="card__data-name">
+            <li>Metal type</li>
+            <li>Stone</li>
+            <li>Size</li>
+          </ul>
+          <ul class="card__data-value">
+            <li>Gold 585</li>
+            <li>Turquoise</li>
+            <li>18” / 20”</li>
+          </ul>
+        </div>
+        <a href="#" class="card__add">Add to cart</a>
+        <ul class="card__delivery">
+          <li>14 Day Returns</li>
+          <li>2-Year Warranty</li>
+          <li>Free Shipping</li>
         </ul>
-        <button type="submit">Apply</button>
-        <button type="reset">Clear All</button>
-      </form>
-    </div>
+      </div>
+    </section>
     <section class="new">
-      <ul class="new__list new__list-catalog">
+      <div class="new__menu">
+        <button class="new__button new__button-left"></button>
+        <div class="new__menu-title">
+          <h3>You May Also Like</h3>
+          <a href="#">Shop Now</a>
+        </div>
+        <button class="new__button new__button-right"></button>
+      </div>
+      <ul class="new__list">
         <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item1_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Double pearl earrings </p>
-            <span>$ 115</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/item2_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Choker with gold beadr</p>
-            <span>$ 55</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/item3_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Gold layered necklace</p>
-            <span>$ 155</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/item4_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Blue gemstone pendant</p>
-            <span>$ 105</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item5_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Boho earrings</p>
-            <span>$ 75</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item6_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Gold bird necklace</p>
-            <span>$ 135</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item7_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Black leather choker</p>
-            <span>$ 85</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item8_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+          <li class="new__list-item">
+            <img src="img/item1_desktop@1x.jpg" width="270" height="284" alt="Изображение ожерелья">
             <p>Necklace with amethyst</p>
             <span>$ 145</span>
           </li>
         </a>
         <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item9_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Elephant earrings</p>
-            <span>$ 95</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item10_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Threader necklace</p>
+          <li class="new__list-item">
+            <img src="img/item2_desktop@1x.jpg" width="270" height="284" alt="Изображение чокера">
+            <p>Layered сhoker</p>
             <span>$ 115</span>
           </li>
         </a>
         <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item11_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Origami crane necklace</p>
-            <span>$ 105</span>
+          <li class="new__list-item">
+            <img src="img/item3_desktop@1x.jpg" width="270" height="284" alt="Изображение цепочки">
+            <p>Gold chain</p>
+            <span>$ 215</span>
           </li>
         </a>
         <a href="">
-          <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item12_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
-            <p>Marble earrings</p>
+          <li class="new__list-item">
+            <img src="img/item4_desktop@1x.jpg" width="270" height="284" alt="Изображение серег">
+            <p>Galaxy earrings</p>
             <span>$ 95</span>
           </li>
         </a>
       </ul>
-      <div class="new__nav">
-        <button class="new__nav-button">Previous</button>
-        <div class="new__nav-counter">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
-        </div>
-        <button class="new__nav-button">Next</button>
+      <div class="new__counter">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
       </div>
     </section>
   </main>

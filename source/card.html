@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Каталог Jewellery">
-  <title>Jewellery Main</title>
+  <title>Jewellery Card</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -43,17 +43,51 @@
         </ul>
       </nav>
     </div>
-    <div class="header__image">
-      <h2>Perfection</h2>
-      <p>made to be yours</p>
-    </div>
   </header>
   <main class="container">
+    <section class="card">
+      <div class="card__images">
+        <div class="card__images-block">
+          <img src="img/card_img1_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+          <img src="img/card_img2_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+          <img src="img/card_img3_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+        </div>
+        <div class="card__images-block">
+          <img src="img/card_img4_desktop@1x.jpg" width="470" height="435" alt="Контентное изображение">
+        </div>
+      </div>
+      <div class="card__info">
+        <h3>Gold Necklace </h3>
+        <p>$ 115</p>
+        <div class="card__info-additional">
+          <button class="card__button">Description</button>
+          <button class="card__button card__active">Additional info</button>
+        </div>
+        <div class="card__data">
+          <ul class="card__data-name">
+            <li>Metal type</li>
+            <li>Stone</li>
+            <li>Size</li>
+          </ul>
+          <ul class="card__data-value">
+            <li>Gold 585</li>
+            <li>Turquoise</li>
+            <li>18” / 20”</li>
+          </ul>
+        </div>
+        <a href="#" class="card__add">Add to cart</a>
+        <ul class="card__delivery">
+          <li>14 Day Returns</li>
+          <li>2-Year Warranty</li>
+          <li>Free Shipping</li>
+        </ul>
+      </div>
+    </section>
     <section class="new">
       <div class="new__menu">
         <button class="new__button new__button-left"></button>
         <div class="new__menu-title">
-          <h3>New In</h3>
+          <h3>You May Also Like</h3>
           <a href="#">Shop Now</a>
         </div>
         <button class="new__button new__button-right"></button>
@@ -92,85 +126,6 @@
         <span>1</span>
         <span>2</span>
         <span>3</span>
-      </div>
-    </section>
-    <section class="blog">
-      <h3>Blog</h3>
-      <a class="blog__read" href="#">Read All</a>
-      <div class="blog__content">
-        <div class="blog__left">
-          <div class="blog__left-content">
-            <img src="img/blog1_desktop@1x.jpg" width="285" height="300" alt="Контентное изображение">
-            <div class="blog__card">
-              September 30, 2019
-              <p>How to care for your jewellery</p>
-              <a href="">Read Article</a>
-            </div>
-          </div>
-          <div class="blog__left-content">
-            <div class="blog__card">
-              September 23, 2019
-              <p>Power of crystals</p>
-              <a href="">Read Article</a>
-            </div>
-            <img src="img/blog2_desktop@1x.jpg" width="285" height="300" alt="Контентное изображение">
-          </div>
-        </div>
-        <div class="blog__right">
-          <img src="img/blog3_desktop@1x.jpg" width="570" height="630" alt="Контентное изображение">
-          <div class="blog__card blog__card-move">
-            September 16, 2019
-            <p>AW 19 trends</p>
-            <a href="">Read Article</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="questions">
-      <h3>Frequently asked questions</h3>
-      <ul class="questions__list">
-        <li class="questions__list-item">
-          <h4>What materials are the jewellery made of?</h4>
-          <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-            semiprecious stones and crystals.</p>
-          <button class="questions__button questions__button--active">Показать</button>
-        </li>
-        <li class="questions__list-item">
-          <h4>Which countries do you deliver to?</h4>
-          <p></p>
-          <button class="questions__button">Показать</button>
-        </li>
-        <li class="questions__list-item">
-          <h4>What are the payment methods?</h4>
-          <p></p>
-          <button class="questions__button">Показать</button>
-        </li>
-        <li class="questions__list-item">
-          <h4>Can I return the jewellery if it didn’t fit me?</h4>
-          <p></p>
-          <button class="questions__button">Показать</button>
-        </li>
-      </ul>
-    </section>
-    <section class="gallery">
-      <h3>@Chjewellery</h3>
-      <a href="#" class="gallery__follow">Follow Us</a>
-      <div class="gallery__images">
-        <div class="gallery__block">
-          <img src="img/gallery1@1x.jpg" width="230" height="230" alt="Контентное изображение">
-          <img src="img/gallery2@1x.jpg" width="230" height="150" alt="Контентное изображение">
-        </div>
-        <div class="gallery__block">
-          <img src="img/gallery3@1x.jpg" width="399" height="412" alt="Контентное изображение">
-        </div>
-        <div class="gallery__block">
-          <img src="img/gallery4@1x.jpg" width="230" height="230" alt="Контентное изображение">
-          <img src="img/gallery6@1x.jpg" width="230" height="150" alt="Контентное изображение">
-        </div>
-        <div class="gallery__block">
-          <img src="img/gallery5@1x.jpg" width="230" height="230" alt="Контентное изображение">
-          <img src="img/gallery7@1x.jpg" width="230" height="150" alt="Контентное изображение">
-        </div>
       </div>
     </section>
   </main>

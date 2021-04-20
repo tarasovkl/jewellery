@@ -59,6 +59,7 @@
 
 .new__list {
   font-family: $font-text;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -68,12 +69,22 @@
   flex-wrap: wrap;
 }
 
+.new__list-catalog {
+  margin-top: 0;
+}
+
 .new__list a {
   color: $text-color;
+  margin-bottom: 25px;
+  margin-right: 10px;
+
+  &:nth-child(3n+3) {
+  margin-right: 0;
+  }
 }
 
 .new__list-catitem {
-margin-bottom: 40px;
+margin-bottom: 19px;
 }
 
 .new__list-item p {
