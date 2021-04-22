@@ -61,3 +61,19 @@
   .questions__button--active {
     background:  url("../img/arrow_up.svg") center no-repeat;
   }
+
+  @media (max-width: $tablet-width) {
+    .questions {
+    }
+    .questions__list {
+      width: 100%;
+    }
+    .questions__button {
+    }
+    .questions__button--active {
+    }
+
+    .questions__list-item p {
+      width: 85%;
+    }
+  }

@@ -38,6 +38,10 @@
   background-color: #000000;
   border: none;
 
+  &:focus {
+    outline: none;
+  }
+
   &::placeholder {
     color: #9b9997;
   }
@@ -53,6 +57,10 @@
   background: none;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .footer__form h3 {
@@ -84,12 +92,17 @@
 
 .footer__list li {
   margin-bottom: 30px;
+  margin-right: 10px;
 }
 .footer__list-item {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .footer__content {
@@ -100,4 +113,36 @@
 
 .footer__icon {
   margin-right: 15px;
+}
+
+@media (max-width: $tablet-width) {
+
+  .footer {
+    min-height: 446px;
+    padding-top: 60px;
+  }
+  .footer__content {
+  }
+  .footer__form {
+    margin-bottom: 65px;
+  }
+
+  .footer__form h3{
+  }
+
+  .footer__form p{
+    margin-bottom: 55px;
+  }
+
+  .footer__form  form {
+  }
+
+  .footer__list {
+  }
+  .footer__list-item {
+  }
+  .footer__socials {
+  }
+  .footer__icon {
+  }
 }
