@@ -23,14 +23,20 @@
     <div class="container">
       <div class="header__top">
         <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-          <button type="submit"></button>
+          <button type="submit"><svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg></button>
           <label for=""></label>
           <input type="search" name="search" id="search" placeholder="Type here to search">
         </form>
+        <button class="header__top-toggle">Открыть<svg class="header__top-burger" width="25" height="16">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
+          </svg></button>
         <img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип">
         <div class="header__personal">
           <a href="#" class="header__login">Login</a>
-          <a href="#" class="header__cart">Cart <span class='header__cart-counter'>0</span></a>
+          <a href="#" class="header__cart"><span class="header__cart-text">Cart</span><span
+              class='header__cart-counter'>0</span></a>
         </div>
       </div>
       <nav class="header__menu">
@@ -41,15 +47,21 @@
           <li><a href="#" class="header__menu-item">Rings</a></li>
           <li><a href="#" class="header__menu-item">Earrings</a></li>
         </ul>
+        <ul class="header__hidden-list">
+          <li><a href="#" class="header__hidden-item">About CH</a></li>
+          <li><a href="#" class="header__hidden-item">Stores & Hours</a></li>
+          <li><a href="#" class="header__hidden-item">Contact Us</a></li>
+        </ul>
       </nav>
     </div>
-    <div class="header__image header__image-catalog">
-      <h2 class="header__image-title">ALL JEWELLERY</h2>
-      <p class="header__image-text">Discover picks of fashion's finest trends in our jewellery catalog</p>
+    <div class="header__image">
+      <h2>Perfection</h2>
+      <p>made to be yours</p>
     </div>
   </header>
   <main class="container container-catalog">
     <div class="filter">
+      <button class="filter__open">Filter</button>
       <form action="">
         <ul>
           <li>
@@ -112,84 +124,252 @@
       <ul class="new__list new__list-catalog">
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item1_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item1_mobile@1x.webp 1x, img/cat_item1_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item1_tablet@1x.webp 1x, img/cat_item1_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item1_desktop@1x.webp 1x, img/cat_item1_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item1_mobile@1x.jpg 1x, img/cat_item1_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item1_tablet@1x.jpg, img/cat_item1_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item1_desktop@1x.jpg"
+                srcset="img/cat_item1_desktop@1x.jpg 1x, img/cat_item1_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Double pearl earrings </p>
             <span>$ 115</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/item2_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item2_mobile@1x.webp 1x, img/cat_item2_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item2_tablet@1x.webp 1x, img/cat_item2_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item2_desktop@1x.webp 1x, img/cat_item2_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item2_mobile@1x.jpg 1x, img/cat_item2_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item2_tablet@1x.jpg, img/cat_item2_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item2_desktop@1x.jpg"
+                srcset="img/cat_item2_desktop@1x.jpg 1x, img/cat_item2_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Choker with gold beadr</p>
             <span>$ 55</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/item3_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item3_mobile@1x.webp 1x, img/cat_item3_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item3_tablet@1x.webp 1x, img/cat_item3_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item3_desktop@1x.webp 1x, img/cat_item3_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item3_mobile@1x.jpg 1x, img/cat_item3_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item3_tablet@1x.jpg, img/cat_item3_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item3_desktop@1x.jpg"
+                srcset="img/cat_item3_desktop@1x.jpg 1x, img/cat_item3_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Gold layered necklace</p>
             <span>$ 155</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/item4_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item4_mobile@1x.webp 1x, img/cat_item4_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item4_tablet@1x.webp 1x, img/cat_item4_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item4_desktop@1x.webp 1x, img/cat_item4_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item4_mobile@1x.jpg 1x, img/cat_item4_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item4_tablet@1x.jpg, img/cat_item4_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item4_desktop@1x.jpg"
+                srcset="img/cat_item4_desktop@1x.jpg 1x, img/cat_item4_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Blue gemstone pendant</p>
             <span>$ 105</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item5_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item5_mobile@1x.webp 1x, img/cat_item5_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item5_tablet@1x.webp 1x, img/cat_item5_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item5_desktop@1x.webp 1x, img/cat_item5_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item5_mobile@1x.jpg 1x, img/cat_item5_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item5_tablet@1x.jpg, img/cat_item5_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item5_desktop@1x.jpg"
+                srcset="img/cat_item5_desktop@1x.jpg 1x, img/cat_item5_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Boho earrings</p>
             <span>$ 75</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item6_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item6_mobile@1x.webp 1x, img/cat_item6_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item6_tablet@1x.webp 1x, img/cat_item6_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item6_desktop@1x.webp 1x, img/cat_item6_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item6_mobile@1x.jpg 1x, img/cat_item6_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item6_tablet@1x.jpg, img/cat_item6_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item6_desktop@1x.jpg"
+                srcset="img/cat_item6_desktop@1x.jpg 1x, img/cat_item6_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
+            </picture>
             <p>Gold bird necklace</p>
             <span>$ 135</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item7_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item7_mobile@1x.webp 1x, img/cat_item7_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item7_tablet@1x.webp 1x, img/cat_item7_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item7_desktop@1x.webp 1x, img/cat_item7_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item7_mobile@1x.jpg 1x, img/cat_item7_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item7_tablet@1x.jpg, img/cat_item7_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item7_desktop@1x.jpg" srcset="img/cat_item7_desktop@1x.jpg 1x, img/cat_item7_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Black leather choker</p>
             <span>$ 85</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item8_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item8_mobile@1x.webp 1x, img/cat_item8_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item8_tablet@1x.webp 1x, img/cat_item8_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item8_desktop@1x.webp 1x, img/cat_item8_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item8_mobile@1x.jpg 1x, img/cat_item8_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item8_tablet@1x.jpg, img/cat_item8_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item8_desktop@1x.jpg" srcset="img/cat_item8_desktop@1x.jpg 1x, img/cat_item8_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Necklace with amethyst</p>
             <span>$ 145</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item9_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item9_mobile@1x.webp 1x, img/cat_item9_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item9_tablet@1x.webp 1x, img/cat_item9_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item9_desktop@1x.webp 1x, img/cat_item9_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item9_mobile@1x.jpg 1x, img/cat_item9_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item9_tablet@1x.jpg, img/cat_item9_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item9_desktop@1x.jpg" srcset="img/cat_item9_desktop@1x.jpg 1x, img/cat_item9_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Elephant earrings</p>
             <span>$ 95</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item10_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item10_mobile@1x.webp 1x, img/cat_item10_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item10_tablet@1x.webp 1x, img/cat_item10_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item10_desktop@1x.webp 1x, img/cat_item10_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item10_mobile@1x.jpg 1x, img/cat_item10_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item10_tablet@1x.jpg, img/cat_item10_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item10_desktop@1x.jpg" srcset="img/cat_item10_desktop@1x.jpg 1x, img/cat_item10_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Threader necklace</p>
             <span>$ 115</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item11_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item11_mobile@1x.webp 1x, img/cat_item11_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item11_tablet@1x.webp 1x, img/cat_item11_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item11_desktop@1x.webp 1x, img/cat_item11_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item11_mobile@1x.jpg 1x, img/cat_item11_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item11_tablet@1x.jpg, img/cat_item11_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item11_desktop@1x.jpg" srcset="img/cat_item11_desktop@1x.jpg 1x, img/cat_item11_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Origami crane necklace</p>
             <span>$ 105</span>
           </li>
         </a>
         <a href="">
           <li class="new__list-item new__list-catitem">
-            <img src="img/cat_item12_desktop@1x.jpg" width="270" height="272" alt="Контентное изображение">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/cat_item12_mobile@1x.webp 1x, img/cat_item12_mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/cat_item12_tablet@1x.webp 1x, img/cat_item12_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/cat_item12_desktop@1x.webp 1x, img/cat_item12_desktop@2x.webp 2x">
+              <!-- 1x: 288px; 2x: 576px -->
+              <source media="(max-width: 767px)" srcset="img/cat_item12_mobile@1x.jpg 1x, img/cat_item12_mobile@2x.jpg 2x">
+              <!-- 1x: 206px; 2x: 412px -->
+              <source media="(max-width: 1023px)" srcset="img/cat_item12_tablet@1x.jpg, img/cat_item12_tablet@2x.jpg 2x">
+              <!-- 1x: 270px; 2x: 540px -->
+              <img src="img/cat_item12_desktop@1x.jpg" srcset="img/cat_item12_desktop@1x.jpg 1x, img/cat_item12_desktop@2x.jpg 2x"
+                width="270" height="272" alt="Изображение ожерелья">
+            </picture>
             <p>Marble earrings</p>
             <span>$ 95</span>
           </li>

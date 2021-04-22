@@ -130,13 +130,19 @@
   }
   .blog__left-content {
     margin-bottom: 50px;
+    
+    margin-bottom: 50px;
   }
   .blog__card {
     width: 339px;
+    flex-grow: 1;
   }
   .blog__right {
+    display: flex;
+    justify-content: flex-start;
   }
   .blog__card-move {
+    position: initial;
   }
 
 }

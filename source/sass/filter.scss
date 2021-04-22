@@ -156,8 +156,63 @@
 }
 
 .filter__price span {
-
   &:last-child {
     margin-left: 50px;
+  }
+
+  .filter__open {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .container {
+  }
+  .container-catalog {
+  }
+  .filter {
+    margin: 0 auto;
+  }
+  .filter form {
+    width: 423px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .filter__open {
+    display: block;
+    width: 100%;
+    padding: 0;
+    height: 56px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    background: #a87b62;
+    border: none;
+    margin-bottom: 50px;
+  }
+
+  .filter__title {
+  }
+  .filter__button {
+  }
+  .filter__button--active {
+  }
+  .filter__controls {
+  }
+  .filter__scale {
+  }
+  .filter__bar {
+  }
+  .filter__toggle {
+  }
+  .filter__toggle--min {
+  }
+  .filter__toggle--max {
+  }
+  .filter__price {
   }
 }

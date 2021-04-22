@@ -23,14 +23,20 @@
     <div class="container">
       <div class="header__top">
         <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-          <button type="submit"></button>
+          <button type="submit"><svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg></button>
           <label for=""></label>
           <input type="search" name="search" id="search" placeholder="Type here to search">
         </form>
+        <button class="header__top-toggle">Открыть<svg class="header__top-burger" width="25" height="16">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
+          </svg></button>
         <img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип">
         <div class="header__personal">
           <a href="#" class="header__login">Login</a>
-          <a href="#" class="header__cart">Cart <span class='header__cart-counter'>0</span></a>
+          <a href="#" class="header__cart"><span class="header__cart-text">Cart</span><span
+              class='header__cart-counter'>0</span></a>
         </div>
       </div>
       <nav class="header__menu">
@@ -41,46 +47,106 @@
           <li><a href="#" class="header__menu-item">Rings</a></li>
           <li><a href="#" class="header__menu-item">Earrings</a></li>
         </ul>
+        <ul class="header__hidden-list">
+          <li><a href="#" class="header__hidden-item">About CH</a></li>
+          <li><a href="#" class="header__hidden-item">Stores & Hours</a></li>
+          <li><a href="#" class="header__hidden-item">Contact Us</a></li>
+        </ul>
       </nav>
     </div>
   </header>
   <main class="container">
     <section class="card">
       <div class="card__images">
-        <div class="card__images-block">
-          <img src="img/card_img1_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
-          <img src="img/card_img2_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
-          <img src="img/card_img3_desktop@1x.jpg" width="100" height="125" alt="Контентное изображение">
+        <div class="card__images-block card__images-block--tablet">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/img/card_img1_mobile@1x.webp 1x, img/card_img1_mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/card_img1_tablet@1x.webp 1x, img/card_img1_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/card_img1_desktop@1x.webp 1x, img/card_img1_desktop@2x.webp 2x">
+            <!-- 1x: 288px; 2x: 576px -->
+            <source media="(max-width: 767px)" srcset="img/card_img1_mobile@1x.jpg 1x, img/card_img1_mobile@2x.jpg 2x">
+            <!-- 1x: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/card_img1_tablet@1x.jpg 1x, img/card_img1_tablet@2x.jpg 2x">
+            <!-- 1x: 270px; 2x: 540px -->
+            <img src="img/card_img1_desktop@1x.jpg" srcset="img/card_img1_desktop@1x.jpg 1x, img/card_img1_desktop@2x.jpg 2x"
+              width="100" height="125" alt="Контентное изображение">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/img/card_img2_mobile@1x.webp 1x, img/card_img2_mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/card_img2_tablet@1x.webp 1x, img/card_img2_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/card_img2_desktop@1x.webp 1x, img/card_img2_desktop@2x.webp 2x">
+            <!-- 1x: 288px; 2x: 576px -->
+            <source media="(max-width: 767px)" srcset="img/card_img2_mobile@1x.jpg 1x, img/card_img2_mobile@2x.jpg 2x">
+            <!-- 1x: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/card_img2_tablet@1x.jpg 1x, img/card_img2_tablet@2x.jpg 2x">
+            <!-- 1x: 270px; 2x: 540px -->
+            <img src="img/card_img2_desktop@1x.jpg" srcset="img/card_img2_desktop@1x.jpg 1x, img/card_img2_desktop@2x.jpg 2x"
+              width="100" height="125" alt="Контентное изображение">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/img/card_img3_mobile@1x.webp 1x, img/card_img3_mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/card_img3_tablet@1x.webp 1x, img/card_img3_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/card_img3_desktop@1x.webp 1x, img/card_img3_desktop@2x.webp 2x">
+            <!-- 1x: 288px; 2x: 576px -->
+            <source media="(max-width: 767px)" srcset="img/card_img3_mobile@1x.jpg 1x, img/card_img3_mobile@2x.jpg 2x">
+            <!-- 1x: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/card_img3_tablet@1x.jpg 1x, img/card_img3_tablet@2x.jpg 2x">
+            <!-- 1x: 270px; 2x: 540px -->
+            <img src="img/card_img3_desktop@1x.jpg" srcset="img/card_img3_desktop@1x.jpg 1x, img/card_img3_desktop@2x.jpg 2x"
+              width="100" height="125" alt="Контентное изображение">
+          </picture>
         </div>
-        <div class="card__images-block">
-          <img src="img/card_img4_desktop@1x.jpg" width="470" height="435" alt="Контентное изображение">
+        <div class="card__images-block card__images-tablet">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/img/card_img4_mobile@1x.webp 1x, img/card_img4_mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/card_img4_tablet@1x.webp 1x, img/card_img4_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/card_img4_desktop@1x.webp 1x, img/card_img4_desktop@2x.webp 2x">
+            <!-- 1x: 288px; 2x: 576px -->
+            <source media="(max-width: 767px)" srcset="img/card_img4_mobile@1x.jpg 1x, img/card_img4_mobile@2x.jpg 2x">
+            <!-- 1x: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/card_img4_tablet@1x.jpg 1x, img/card_img4_tablet@2x.jpg 2x">
+            <!-- 1x: 470px; 2x: 940px -->
+            <img src="img/card_img4_desktop@1x.jpg" srcset="img/card_img4_desktop@1x.jpg 1x, img/card_img4_desktop@2x.jpg 2x"
+              width="470" height="435" alt="Контентное изображение">
+          </picture>
         </div>
       </div>
       <div class="card__info">
         <h3>Gold Necklace </h3>
-        <p>$ 115</p>
+        <p class="card__info-price">$ 115</p>
         <div class="card__info-additional">
           <button class="card__button">Description</button>
           <button class="card__button card__active">Additional info</button>
         </div>
         <div class="card__data">
-          <ul class="card__data-name">
-            <li>Metal type</li>
-            <li>Stone</li>
-            <li>Size</li>
+          <ul class="card__data-list">
+            <li class="card__data-item">
+              <p>Metal type</p>
+              <p class="card__data-specs">Gold 585</p>
+            </li>
+            <li class="card__data-item">
+              <p>Stone</p>
+              <p class="card__data-specs">Turquoise</p>
+            </li>
+            <li class="card__data-item">
+              <p>Size</p>
+              <p class="card__data-specs">18” / 20”</p>
+            </li>
           </ul>
-          <ul class="card__data-value">
-            <li>Gold 585</li>
-            <li>Turquoise</li>
-            <li>18” / 20”</li>
-          </ul>
+          <a href="#" class="card__add">Add to cart</a>
+          <ul class="card__delivery">
+            <li>14 Day Returns</li>
+            <li>2-Year Warranty</li>
+            <li>Free Shipping</li>
         </div>
-        <a href="#" class="card__add">Add to cart</a>
-        <ul class="card__delivery">
-          <li>14 Day Returns</li>
-          <li>2-Year Warranty</li>
-          <li>Free Shipping</li>
-        </ul>
       </div>
     </section>
     <section class="new">
