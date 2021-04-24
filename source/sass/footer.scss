@@ -1,12 +1,16 @@
 .footer {
   background-color: #000000;
   min-height: 338px;
-  padding-top: 100px;
+  padding-top: 80px;
   font-family: $font-text;
   font-style: normal;
+  margin-top: 126px;
 }
 
 .footer__form {
+  margin-right: 15px;
+  margin-bottom: 50px;
+  margin-top: 10px;
 }
 
 .footer__form form {
@@ -21,7 +25,7 @@
     width: 500px;
     height: 0;
     left: 0;
-    top: 35px;
+    top: 31px;
     border: 1px solid #9b9997;
   }
 }
@@ -65,7 +69,7 @@
 
 .footer__form h3 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
   font-family: $font-head;
   font-style: normal;
   font-weight: bold;
@@ -73,6 +77,7 @@
   line-height: 44px;
   letter-spacing: 0.03em;
   color: #ffffff;
+  letter-spacing: 0.03em;
 }
 
 .footer__form p {
@@ -81,17 +86,18 @@
   line-height: 21px;
   color: #9b9997;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 43px;
 }
 
 .footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: 17px;
 }
 
 .footer__list li {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   margin-right: 10px;
 }
 .footer__list-item {
@@ -115,8 +121,14 @@
   margin-right: 15px;
 }
 
-@media (max-width: $tablet-width) {
+.footer__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 49.5%;
+}
 
+@media (max-width: $tablet-width) {
   .footer {
     min-height: 446px;
     padding-top: 60px;
@@ -128,14 +140,14 @@
     width: 100%;
   }
 
-  .footer__form h3{
+  .footer__form h3 {
   }
 
-  .footer__form p{
+  .footer__form p {
     margin-bottom: 55px;
   }
 
-  .footer__form  form {
+  .footer__form form {
   }
 
   .footer__list {
