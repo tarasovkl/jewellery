@@ -53,27 +53,56 @@
   left: calc(100% - 50px);
   top: 50px;
   border: none;
-  background:  url("../img/arrow_down.svg") center no-repeat;
+  background: url("../img/arrow_down.svg") center no-repeat;
   cursor: pointer;
   font-size: 0;
-  }
+}
 
+.questions__button--active {
+  background: url("../img/arrow_up.svg") center no-repeat;
+}
+
+@media (max-width: $tablet-width) {
+  .questions {
+  }
+  .questions__list {
+    width: 100%;
+  }
+  .questions__button {
+  }
   .questions__button--active {
-    background:  url("../img/arrow_up.svg") center no-repeat;
   }
 
-  @media (max-width: $tablet-width) {
-    .questions {
-    }
-    .questions__list {
-      width: 100%;
-    }
-    .questions__button {
-    }
-    .questions__button--active {
-    }
-
-    .questions__list-item p {
-      width: 85%;
-    }
+  .questions__list-item p {
+    width: 85%;
   }
+}
+
+@media (max-width: $mobile-width) {
+  .questions {
+  }
+  .questions__list {
+  }
+  .questions__button {
+  }
+  .questions__button--active {
+  }
+
+  .questions__list-item {
+    padding-left: 25px;
+
+  }
+
+  .questions__list-item h4 {
+    width: 70%;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 22px;
+  }
+
+  .questions__list-item p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 78%;
+  }
+}

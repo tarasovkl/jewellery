@@ -11,6 +11,7 @@ h1 {
   max-width: 1190px;
   padding: 0 10px;
   margin: 0 auto;
+  min-width: 320px;
 }
 
 .container-catalog {
@@ -181,7 +182,6 @@ h1 {
     align-items: center;
   }
   .header__personal {
-
   }
 
   .header__personal a {
@@ -217,9 +217,9 @@ h1 {
     margin-top: 90px;
   }
 
-.header__menu-list li {
-  padding: 12px 0;
-}
+  .header__menu-list li {
+    padding: 12px 0;
+  }
 
   .header__menu-item {
     font-size: 24px;
@@ -250,7 +250,6 @@ h1 {
     }
   }
 
-
   .header__image {
     background: url("../img/header_bg_tabtet@1x.jpg") center no-repeat;
     background-size: cover;
@@ -279,7 +278,6 @@ h1 {
   }
 
   .header__top-burger {
-
   }
 
   .header__top input {
@@ -299,5 +297,53 @@ h1 {
 
   .container-catalog {
     display: block;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+  }
+  .container {
+  }
+  .header__top {
+  }
+  .header__top-toggle {
+  }
+  .header__top-burger {
+  }
+  .header__personal {
+  }
+  .header__login {
+  }
+  .header__cart {
+  }
+  .header__cart-text {
+  }
+  .header__cart-counter {
+  }
+  .header__menu {
+  }
+  .header__menu-list {
+  }
+  .header__menu-item {
+  }
+  .header__hidden-list {
+  }
+  .header__hidden-item {
+  }
+  .header__image {
+    background: url("../img/header_bg_mobile@1x.jpg") center no-repeat;
+    background-size: cover;
+    height: 463px;
+  }
+
+  .header__image h2 {
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  .header__image p {
+    font-size: 34px;
+    line-height: 44px;
   }
 }

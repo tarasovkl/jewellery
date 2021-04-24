@@ -74,3 +74,39 @@
     height: 87px;
   }
 }
+
+@media (max-width: $mobile-width) {
+
+  .gallery {
+  }
+  .gallery__follow {
+  }
+  .gallery__images {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 290px;
+    flex-wrap: wrap;
+  }
+  .gallery__block-custom1 {
+
+  }
+
+  .gallery__block2 img {
+
+  }
+
+  .gallery__block {
+
+    &:last-child {
+      display: none;
+    }
+
+    &:nth-child(3n) {
+      flex-direction: row;
+    }
+  }
+
+  .gallery__block-custom2 {
+
+  }
+}
