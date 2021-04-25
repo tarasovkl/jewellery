@@ -13,21 +13,23 @@
 </head>
 
 <body>
-  <main class="login">
-    <button class="login__close">Закрыть</button>
-    <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-      <h2>Log In</h2>
-      <label for="mail">Email</label>
-      <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
-      <label for="pass">Password</label>
-      <input type="password" name="pass" id="pass" pattern="[0-9A-Za-zА-Яа-я]{3}" placeholder="Password" required="">
-      <a href="#">Forgot your password?</a>
-      <button type="submit">Log In</button>
-      <div>
-        <p>Don’t have an account?</p>
-        <a href="#">Sign up</a>
-      </div>
-    </form>
+  <main>
+    <div class="login">
+      <button class="login__close">Закрыть</button>
+      <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+        <h2>Log In</h2>
+        <label for="mail">Email</label>
+        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" pattern="[0-9A-Za-zА-Яа-я]{3}" placeholder="Password" required="">
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+        <div class="login__wrapper">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
+    </div>
   </main>
 
 </body>
