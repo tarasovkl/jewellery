@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Каталог Jewellery">
+  <title>Jewellery Main</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+
+<body>
+  <main class="login">
+    <button class="login__close">Закрыть</button>
+    <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+      <h2>Log In</h2>
+      <label for="mail">Email</label>
+      <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" pattern="[0-9A-Za-zА-Яа-я]{3}" placeholder="Password" required="">
+      <a href="#">Forgot your password?</a>
+      <button type="submit">Log In</button>
+      <div>
+        <p>Don’t have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
+    </form>
+  </main>
+
+</body>
+
+</html>
