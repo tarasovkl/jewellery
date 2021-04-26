@@ -1,9 +1,10 @@
 .card {
   display: flex;
   justify-content: space-between;
+  margin-top: 80px;
 }
 .card__images {
-  width: 52%;
+  width: 600px;
   display: flex;
   justify-content: space-between;
 }
@@ -13,10 +14,11 @@
   justify-content: space-between;
 }
 .card__info {
-  width: 35%;
+  width: 31.6%;
   font-family: $font-text;
   font-style: normal;
   min-height: 435px;
+  margin-right: 100px;
 }
 
 .card__info h3 {
@@ -25,8 +27,8 @@
   font-size: 34px;
   line-height: 44px;
   color: $text-color;
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin-top: -9px;
+  margin-bottom: 10px;
 }
 
 .card__info-price {
@@ -35,7 +37,7 @@
   line-height: 34px;
   color: $text-color;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 }
 
 .card__info-additional {
@@ -60,7 +62,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 17px;
   margin-bottom: 0;
   font-weight: 500;
   font-size: 14px;
@@ -73,6 +75,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  margin-bottom: 53px;
 }
 .card__data-item {
   display: flex;
@@ -85,9 +88,13 @@
     width: 100%;
     height: 0px;
     left: 0px;
-    top: 45px;
+    top: 42px;
     border: 1px solid #f6f5f4;
   }
+}
+
+.card__data-item p {
+  margin-bottom: 8px;
 }
 
 .card__data-specs {
@@ -105,7 +112,7 @@
   color: #ffffff;
   text-align: center;
   padding-top: 24px;
-  margin-bottom: 21px;
+  margin-bottom: 17px;
 }
 .card__delivery {
   list-style: none;
@@ -140,7 +147,7 @@
   }
 
   .card__images-tablet {
-    
+
   }
 
   .card__images-tablet img {

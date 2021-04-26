@@ -32,7 +32,7 @@
         <button class="header__top-toggle">Открыть<svg class="header__top-burger" width="25" height="16">
             <use xlink:href="img/sprite.svg#icon-burger"></use>
           </svg></button>
-        <img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип">
+        <a href="#" class="header__top-logo"><img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип"></a>
         <div class="header__personal">
           <a href="#" class="header__login">Login</a>
           <a href="#" class="header__cart"><span class="header__cart-text">Cart</span><span
@@ -70,8 +70,9 @@
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img1_tablet@1x.jpg 1x, img/card_img1_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
-            <img src="img/card_img1_desktop@1x.jpg" srcset="img/card_img1_desktop@1x.jpg 1x, img/card_img1_desktop@2x.jpg 2x"
-              width="100" height="125" alt="Контентное изображение">
+            <img src="img/card_img1_desktop@1x.jpg"
+              srcset="img/card_img1_desktop@1x.jpg 1x, img/card_img1_desktop@2x.jpg 2x" width="100" height="125"
+              alt="Контентное изображение">
           </picture>
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
@@ -84,8 +85,9 @@
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img2_tablet@1x.jpg 1x, img/card_img2_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
-            <img src="img/card_img2_desktop@1x.jpg" srcset="img/card_img2_desktop@1x.jpg 1x, img/card_img2_desktop@2x.jpg 2x"
-              width="100" height="125" alt="Контентное изображение">
+            <img src="img/card_img2_desktop@1x.jpg"
+              srcset="img/card_img2_desktop@1x.jpg 1x, img/card_img2_desktop@2x.jpg 2x" width="100" height="125"
+              alt="Контентное изображение">
           </picture>
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
@@ -98,8 +100,9 @@
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img3_tablet@1x.jpg 1x, img/card_img3_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
-            <img src="img/card_img3_desktop@1x.jpg" srcset="img/card_img3_desktop@1x.jpg 1x, img/card_img3_desktop@2x.jpg 2x"
-              width="100" height="125" alt="Контентное изображение">
+            <img src="img/card_img3_desktop@1x.jpg"
+              srcset="img/card_img3_desktop@1x.jpg 1x, img/card_img3_desktop@2x.jpg 2x" width="100" height="125"
+              alt="Контентное изображение">
           </picture>
         </div>
         <div class="card__images-block card__images-tablet">
@@ -114,8 +117,9 @@
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img4_tablet@1x.jpg 1x, img/card_img4_tablet@2x.jpg 2x">
             <!-- 1x: 470px; 2x: 940px -->
-            <img src="img/card_img4_desktop@1x.jpg" srcset="img/card_img4_desktop@1x.jpg 1x, img/card_img4_desktop@2x.jpg 2x"
-              width="470" height="435" alt="Контентное изображение">
+            <img src="img/card_img4_desktop@1x.jpg"
+              srcset="img/card_img4_desktop@1x.jpg 1x, img/card_img4_desktop@2x.jpg 2x" width="470" height="435"
+              alt="Контентное изображение">
           </picture>
         </div>
       </div>
@@ -150,7 +154,7 @@
       </div>
     </section>
     <section class="new">
-      <div class="new__menu">
+      <div class="new__menu new__menu-card">
         <button class="new__button new__button-left"></button>
         <div class="new__menu-title">
           <h3>You May Also Like</h3>
@@ -195,7 +199,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer footer-card">
     <div class="container footer__content">
       <div class="footer__form">
         <h3>The good stuff in your inbox </h3>
@@ -206,36 +210,38 @@
           <button type="submit">Sign Up</button>
         </form>
       </div>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__list-item">Ordering & Payment</a></li>
-        <li><a href="#" class="footer__list-item">Terms & Conditions</a></li>
-        <li><a href="#" class="footer__list-item">Returns & Exchanges</a></li>
-        <li><a href="#" class="footer__list-item">Delivery</a></li>
-      </ul>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__list-item">About CH</a></li>
-        <li><a href="#" class="footer__list-item">Stores & Hours</a></li>
-        <li><a href="#" class="footer__list-item">Jobs</a></li>
-        <li><a href="#" class="footer__list-item">Contact Us</a></li>
-      </ul>
-      <ul class="footer__list footer__socials">
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-facebook"></use>
-            </svg>Facebook</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
-            </svg>Instagram</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-pin"></use>
-            </svg>Pinterest</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="13">
-              <use xlink:href="img/sprite.svg#icon-twit"></use>
-            </svg>Twitter</a></li>
-      </ul>
+      <div class="footer__content-wrapper">
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-item">Ordering & Payment</a></li>
+          <li><a href="#" class="footer__list-item">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__list-item">Returns & Exchanges</a></li>
+          <li><a href="#" class="footer__list-item">Delivery</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-item">About CH</a></li>
+          <li><a href="#" class="footer__list-item">Stores & Hours</a></li>
+          <li><a href="#" class="footer__list-item">Jobs</a></li>
+          <li><a href="#" class="footer__list-item">Contact Us</a></li>
+        </ul>
+        <ul class="footer__list footer__socials">
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>Facebook</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>Instagram</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-pin"></use>
+              </svg>Pinterest</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="13">
+                <use xlink:href="img/sprite.svg#icon-twit"></use>
+              </svg>Twitter</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>

@@ -32,7 +32,7 @@
         <button class="header__top-toggle">Открыть<svg class="header__top-burger" width="25" height="16">
             <use xlink:href="img/sprite.svg#icon-burger"></use>
           </svg></button>
-        <img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип">
+        <a href="#" class="header__top-logo"><img src="img/logo_desktop.svg" width="66" height="66" alt="Логотип"></a>
         <div class="header__personal">
           <a href="#" class="header__login">Login</a>
           <a href="#" class="header__cart"><span class="header__cart-text">Cart</span><span
@@ -54,9 +54,9 @@
         </ul>
       </nav>
     </div>
-    <div class="header__image">
-      <h2>Perfection</h2>
-      <p>made to be yours</p>
+    <div class="header__image header__image-catalog">
+      <h2>All Jewellery</h2>
+      <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
     </div>
   </header>
   <main class="container container-catalog">
@@ -67,51 +67,59 @@
           <li>
             <div class="filter__title">
               <p>Product</p>
-              <button class="filter__button filter__button--active">Показать</button>
+              <button class="filter__button filter__button--active" type="button">Показать</button>
             </div>
-            <input type="checkbox" name="option" id="necklace" checked>
-            <label for="necklace">Necklaces</label>
-            <input type="checkbox" name="option" id="Choker" checked>
-            <label for="Choker">Chokers</label>
-            <input type="checkbox" name="option" id="Ring">
-            <label for="Ring">Rings</label>
-            <input type="checkbox" name="option" id="Earrings" checked>
-            <label for="Earrings">Earrings</label>
+            <div class="filter__options filter__options--active">
+              <input type="checkbox" name="option" id="necklace" checked>
+              <label for="necklace">Necklaces</label>
+              <input type="checkbox" name="option" id="Choker" checked>
+              <label for="Choker">Chokers</label>
+              <input type="checkbox" name="option" id="Ring">
+              <label for="Ring">Rings</label>
+              <input type="checkbox" name="option" id="Earrings" checked>
+              <label for="Earrings">Earrings</label>
+            </div>
           </li>
           <li>
             <div class="filter__title">
               <p>Material</p>
-              <button class="filter__button">Показать</button>
+              <button class="filter__button" type="button">Показать</button>
             </div>
-            <input type="checkbox" name="option" id="gold" checked>
-            <label for="gold">Gold</label>
-            <input type="checkbox" name="option" id="silver" checked>
-            <label for="silver">Silver</label>
+            <div class="filter__options">
+              <input type="checkbox" name="option" id="gold" checked>
+              <label for="gold">Gold</label>
+              <input type="checkbox" name="option" id="silver" checked>
+              <label for="silver">Silver</label>
+            </div>
           </li>
           <li>
             <div class="filter__title">
               <p>Collection</p>
-              <button class="filter__button">Показать</button>
+              <button class="filter__button" type="button">Показать</button>
             </div>
-            <input type="checkbox" name="option" id="pink" checked>
-            <label for="pink">Pink flamingo</label>
-            <input type="checkbox" name="option" id="dreams" checked>
-            <label for="dreams">Dreams</label>
+            <div class="filter__options">
+              <input type="checkbox" name="option" id="pink" checked>
+              <label for="pink">Pink flamingo</label>
+              <input type="checkbox" name="option" id="dreams" checked>
+              <label for="dreams">Dreams</label>
+            </div>
           </li>
           <li>
             <div class="filter__title">
               <p>Price</p>
-              <button class="filter__button filter__button--active">Показать</button>
+              <button class="filter__button filter__button--active" type="button">Показать</button>
             </div>
-            <div class="filter__controls">
-              <div class="filter__scale">
-                <div class="filter__bar"></div>
-              </div>
-              <div class="filter__toggle filter__toggle--min" aria-label="Минимум"></div>
-              <div class="filter__toggle filter__toggle--max" aria-label="Максимум"></div>
-              <div class="filter__price">
-                <span>$ 55</span>
-                <span>$ 155</span>
+            <div class="filter__options filter__options--active">
+              <div class="filter__controls">
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
+                </div>
+                <div class="filter__toggle filter__toggle--min" aria-label="Минимум"></div>
+                <div class="filter__toggle filter__toggle--max" aria-label="Максимум"></div>
+                <div class="filter__price">
+                  <span>$ 55</span>
+                  <span>$ 155</span>
+                </div>
               </div>
             </div>
           </li>
@@ -263,12 +271,14 @@
                 srcset="img/cat_item7_tablet@1x.webp 1x, img/cat_item7_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item7_desktop@1x.webp 1x, img/cat_item7_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item7_mobile@1x.jpg 1x, img/cat_item7_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item7_mobile@1x.jpg 1x, img/cat_item7_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
               <source media="(max-width: 1023px)" srcset="img/cat_item7_tablet@1x.jpg, img/cat_item7_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item7_desktop@1x.jpg" srcset="img/cat_item7_desktop@1x.jpg 1x, img/cat_item7_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item7_desktop@1x.jpg"
+                srcset="img/cat_item7_desktop@1x.jpg 1x, img/cat_item7_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Black leather choker</p>
             <span>$ 85</span>
@@ -283,12 +293,14 @@
                 srcset="img/cat_item8_tablet@1x.webp 1x, img/cat_item8_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item8_desktop@1x.webp 1x, img/cat_item8_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item8_mobile@1x.jpg 1x, img/cat_item8_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item8_mobile@1x.jpg 1x, img/cat_item8_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
               <source media="(max-width: 1023px)" srcset="img/cat_item8_tablet@1x.jpg, img/cat_item8_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item8_desktop@1x.jpg" srcset="img/cat_item8_desktop@1x.jpg 1x, img/cat_item8_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item8_desktop@1x.jpg"
+                srcset="img/cat_item8_desktop@1x.jpg 1x, img/cat_item8_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Necklace with amethyst</p>
             <span>$ 145</span>
@@ -303,12 +315,14 @@
                 srcset="img/cat_item9_tablet@1x.webp 1x, img/cat_item9_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item9_desktop@1x.webp 1x, img/cat_item9_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item9_mobile@1x.jpg 1x, img/cat_item9_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item9_mobile@1x.jpg 1x, img/cat_item9_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
               <source media="(max-width: 1023px)" srcset="img/cat_item9_tablet@1x.jpg, img/cat_item9_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item9_desktop@1x.jpg" srcset="img/cat_item9_desktop@1x.jpg 1x, img/cat_item9_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item9_desktop@1x.jpg"
+                srcset="img/cat_item9_desktop@1x.jpg 1x, img/cat_item9_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Elephant earrings</p>
             <span>$ 95</span>
@@ -323,12 +337,15 @@
                 srcset="img/cat_item10_tablet@1x.webp 1x, img/cat_item10_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item10_desktop@1x.webp 1x, img/cat_item10_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item10_mobile@1x.jpg 1x, img/cat_item10_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item10_mobile@1x.jpg 1x, img/cat_item10_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
-              <source media="(max-width: 1023px)" srcset="img/cat_item10_tablet@1x.jpg, img/cat_item10_tablet@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/cat_item10_tablet@1x.jpg, img/cat_item10_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item10_desktop@1x.jpg" srcset="img/cat_item10_desktop@1x.jpg 1x, img/cat_item10_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item10_desktop@1x.jpg"
+                srcset="img/cat_item10_desktop@1x.jpg 1x, img/cat_item10_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Threader necklace</p>
             <span>$ 115</span>
@@ -343,12 +360,15 @@
                 srcset="img/cat_item11_tablet@1x.webp 1x, img/cat_item11_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item11_desktop@1x.webp 1x, img/cat_item11_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item11_mobile@1x.jpg 1x, img/cat_item11_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item11_mobile@1x.jpg 1x, img/cat_item11_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
-              <source media="(max-width: 1023px)" srcset="img/cat_item11_tablet@1x.jpg, img/cat_item11_tablet@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/cat_item11_tablet@1x.jpg, img/cat_item11_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item11_desktop@1x.jpg" srcset="img/cat_item11_desktop@1x.jpg 1x, img/cat_item11_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item11_desktop@1x.jpg"
+                srcset="img/cat_item11_desktop@1x.jpg 1x, img/cat_item11_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Origami crane necklace</p>
             <span>$ 105</span>
@@ -363,12 +383,15 @@
                 srcset="img/cat_item12_tablet@1x.webp 1x, img/cat_item12_tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat_item12_desktop@1x.webp 1x, img/cat_item12_desktop@2x.webp 2x">
               <!-- 1x: 288px; 2x: 576px -->
-              <source media="(max-width: 767px)" srcset="img/cat_item12_mobile@1x.jpg 1x, img/cat_item12_mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/cat_item12_mobile@1x.jpg 1x, img/cat_item12_mobile@2x.jpg 2x">
               <!-- 1x: 206px; 2x: 412px -->
-              <source media="(max-width: 1023px)" srcset="img/cat_item12_tablet@1x.jpg, img/cat_item12_tablet@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/cat_item12_tablet@1x.jpg, img/cat_item12_tablet@2x.jpg 2x">
               <!-- 1x: 270px; 2x: 540px -->
-              <img src="img/cat_item12_desktop@1x.jpg" srcset="img/cat_item12_desktop@1x.jpg 1x, img/cat_item12_desktop@2x.jpg 2x"
-                width="270" height="272" alt="Изображение ожерелья">
+              <img src="img/cat_item12_desktop@1x.jpg"
+                srcset="img/cat_item12_desktop@1x.jpg 1x, img/cat_item12_desktop@2x.jpg 2x" width="270" height="272"
+                alt="Изображение ожерелья">
             </picture>
             <p>Marble earrings</p>
             <span>$ 95</span>
@@ -388,7 +411,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer footer-catalog">
     <div class="container footer__content">
       <div class="footer__form">
         <h3>The good stuff in your inbox </h3>
@@ -399,38 +422,41 @@
           <button type="submit">Sign Up</button>
         </form>
       </div>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__list-item">Ordering & Payment</a></li>
-        <li><a href="#" class="footer__list-item">Terms & Conditions</a></li>
-        <li><a href="#" class="footer__list-item">Returns & Exchanges</a></li>
-        <li><a href="#" class="footer__list-item">Delivery</a></li>
-      </ul>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__list-item">About CH</a></li>
-        <li><a href="#" class="footer__list-item">Stores & Hours</a></li>
-        <li><a href="#" class="footer__list-item">Jobs</a></li>
-        <li><a href="#" class="footer__list-item">Contact Us</a></li>
-      </ul>
-      <ul class="footer__list footer__socials">
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-facebook"></use>
-            </svg>Facebook</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
-            </svg>Instagram</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-pin"></use>
-            </svg>Pinterest</a></li>
-        <li><a href="#" class="footer__list-item">
-            <svg class="footer__icon" width="15" height="13">
-              <use xlink:href="img/sprite.svg#icon-twit"></use>
-            </svg>Twitter</a></li>
-      </ul>
+      <div class="footer__content-wrapper">
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-item">Ordering & Payment</a></li>
+          <li><a href="#" class="footer__list-item">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__list-item">Returns & Exchanges</a></li>
+          <li><a href="#" class="footer__list-item">Delivery</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-item">About CH</a></li>
+          <li><a href="#" class="footer__list-item">Stores & Hours</a></li>
+          <li><a href="#" class="footer__list-item">Jobs</a></li>
+          <li><a href="#" class="footer__list-item">Contact Us</a></li>
+        </ul>
+        <ul class="footer__list footer__socials">
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>Facebook</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>Instagram</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-pin"></use>
+              </svg>Pinterest</a></li>
+          <li><a href="#" class="footer__list-item">
+              <svg class="footer__icon" width="15" height="13">
+                <use xlink:href="img/sprite.svg#icon-twit"></use>
+              </svg>Twitter</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

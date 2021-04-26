@@ -20,7 +20,7 @@
 }
 
 .filter li {
-  padding: 0 25px;
+  padding: 25px 25px 0;
   font-family: $font-text;
   font-style: normal;
   font-weight: 500;
@@ -28,7 +28,6 @@
   line-height: 18px;
   color: $text-color;
   border: 1px solid #a87b62;
-  padding-top: 28px;
   margin-top: -1px;
 }
 
@@ -38,13 +37,16 @@
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 30px;
+  cursor: pointer;
+  width: 100%;
+  height: 21px;
 }
 
 .filter label {
   display: block;
   width: 140px;
   padding-left: 32px;
-  margin-bottom: 18px;
+  margin-bottom: 13px;
   position: relative;
 
   &::before {
@@ -54,14 +56,14 @@
     height: 15px;
     background-color: #ffffff;
     border: 1px solid #a87b62;
-    left: 7px;
+    left: 9px;
   }
 }
 
 .filter input:checked + label::before {
   width: 15px;
   height: 15px;
-  left: 7px;
+  left: 9px;
   border: 1px solid #a87b62;
   background: #a87b62;
 }
@@ -83,7 +85,7 @@
 .filter__title {
   display: flex;
   justify-content: space-between;
-  height: 38px;
+  height: 42px;
 }
 
 .filter [type="submit"] {
@@ -136,33 +138,44 @@
 
 .filter__controls {
   position: relative;
+  margin-top: 5px;
 }
 
 .filter__toggle--min {
   position: absolute;
-  left: 54px;
+  left: 45px;
   top: -6px;
 }
 .filter__toggle--max {
   position: absolute;
-  left: 142px;
+  left: 149px;
   top: -6px;
 }
 
 .filter__price {
-  margin-top: 17px;
-  margin-bottom: 23px;
-  margin-left: 45px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  margin-left: 38px;
 }
 
 .filter__price span {
-  &:last-child {
-    margin-left: 50px;
-  }
 
-  .filter__open {
-    display: none;
+  &:last-child {
+    margin-left: 67px;
   }
+}
+
+.filter__open {
+  display: none;
+}
+
+.filter__options {
+  display: none;
+  padding-bottom: 10px;
+}
+
+.filter__options--active {
+  display: block;
 }
 
 @media (max-width: $tablet-width) {

@@ -6,6 +6,10 @@
   margin-top: 120px;
 }
 
+.new__menu-card {
+  margin-top: 116px;
+}
+
 .new__button {
   width: 29px;
   height: 9px;
@@ -95,6 +99,14 @@
   }
 }
 
+.new__list-catalog a {
+  margin-bottom: 17px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0px;
+  }
+}
+
 .new__list-catitem {
   margin-bottom: 19px;
 }
@@ -128,10 +140,13 @@
 
 .new__nav-counter {
   margin-top: 0;
+  width: 96px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -33px;
 }
 
-.new__counter span,
-.new__nav-counter span {
+.new__counter span {
   margin-left: 8px;
 
   &:first-child {
@@ -142,8 +157,8 @@
 .new__nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 37px;
+  margin-bottom: 0;
 }
 
 .new__nav-button {
@@ -157,6 +172,7 @@
   line-height: 21px;
   color: $font-text;
   height: 12px;
+  padding: 0;
 }
 
 .new__counter-tablet {
