@@ -184,6 +184,7 @@
   .container-catalog {
     margin-top: 50px;
   }
+
   .filter {
     margin: 0 auto;
   }
@@ -235,4 +236,43 @@
   }
   .filter__price {
   }
+}
+
+@media (max-width: $tablet-width) {
+  .filter {
+  }
+  .filter--disable {
+  }
+  .filter__open {
+    margin-bottom: 40px;
+  }
+  .filter__title {
+  }
+  .filter__button {
+  }
+  .filter__button--active {
+  }
+  .filter__options {
+  }
+  .filter__options--active {
+  }
+  .filter__controls {
+  }
+  .filter__scale {
+  }
+  .filter__bar {
+  }
+  .filter__toggle {
+  }
+  .filter__toggle--min {
+  }
+  .filter__toggle--max {
+  }
+  .filter__price {
+  }
+
+  .container-catalog {
+    margin-top: 40px;
+  }
+
 }

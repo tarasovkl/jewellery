@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Каталог Jewellery">
+  <meta name="description" content="Карточка товара Jewellery">
   <title>Jewellery Card</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -19,7 +19,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <h1 class="main-title">Каталог Jewellery</h1>
-  <header class="header header-bg">
+  <header class="header header-bg header-cart">
     <div class="container">
       <div class="header__top">
         <div class="header__form-wrapper">
@@ -68,13 +68,9 @@
       <div class="card__images">
         <div class="card__images-block card__images-block--tablet">
           <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/img/card_img1_mobile@1x.webp 1x, img/card_img1_mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/card_img1_tablet@1x.webp 1x, img/card_img1_tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/card_img1_desktop@1x.webp 1x, img/card_img1_desktop@2x.webp 2x">
-            <!-- 1x: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/card_img1_mobile@1x.jpg 1x, img/card_img1_mobile@2x.jpg 2x">
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img1_tablet@1x.jpg 1x, img/card_img1_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
@@ -83,13 +79,9 @@
               alt="Контентное изображение">
           </picture>
           <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/img/card_img2_mobile@1x.webp 1x, img/card_img2_mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/card_img2_tablet@1x.webp 1x, img/card_img2_tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/card_img2_desktop@1x.webp 1x, img/card_img2_desktop@2x.webp 2x">
-            <!-- 1x: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/card_img2_mobile@1x.jpg 1x, img/card_img2_mobile@2x.jpg 2x">
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img2_tablet@1x.jpg 1x, img/card_img2_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
@@ -98,13 +90,9 @@
               alt="Контентное изображение">
           </picture>
           <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/img/card_img3_mobile@1x.webp 1x, img/card_img3_mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/card_img3_tablet@1x.webp 1x, img/card_img3_tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/card_img3_desktop@1x.webp 1x, img/card_img3_desktop@2x.webp 2x">
-            <!-- 1x: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/card_img3_mobile@1x.jpg 1x, img/card_img3_mobile@2x.jpg 2x">
             <!-- 1x: 503px; 2x: 1006px -->
             <source media="(max-width: 1023px)" srcset="img/card_img3_tablet@1x.jpg 1x, img/card_img3_tablet@2x.jpg 2x">
             <!-- 1x: 270px; 2x: 540px -->
@@ -116,7 +104,7 @@
         <div class="card__images-block card__images-tablet">
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/img/card_img4_mobile@1x.webp 1x, img/card_img4_mobile@2x.webp 2x">
+              srcset="img/card_img4_mobile@1x.webp 1x, img/card_img4_mobile@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/card_img4_tablet@1x.webp 1x, img/card_img4_tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/card_img4_desktop@1x.webp 1x, img/card_img4_desktop@2x.webp 2x">
@@ -129,6 +117,7 @@
               srcset="img/card_img4_desktop@1x.jpg 1x, img/card_img4_desktop@2x.jpg 2x" width="470" height="435"
               alt="Контентное изображение">
           </picture>
+          <span class="card__images-counter">1 of 4</span>
         </div>
       </div>
       <div class="card__info">

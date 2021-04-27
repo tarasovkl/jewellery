@@ -166,10 +166,13 @@
 
 @media (max-width: $mobile-width) {
   .blog {
+    margin-top: 56px;
+
   }
   .blog__read {
   }
   .blog__content {
+    margin-top: 55px;
   }
 
   .blog__content img {
@@ -182,17 +185,20 @@
   }
 
   .blog__left {
+    justify-content: center;
+    align-items: center;
   }
   .blog__left-content {
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 40px;
   }
   .blog__card {
     width: 290px;
     height: 256px;
     flex-grow: 0;
     margin: 0 auto;
-    padding-top: 49px;
+    padding-top: 45px;
     text-align: center;
   }
 
@@ -211,5 +217,6 @@
     flex-direction: column;
   }
   .blog__card-move {
+    padding-top: 64px;
   }
 }

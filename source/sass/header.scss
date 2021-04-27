@@ -2,11 +2,40 @@ h1 {
   display: none;
 }
 .header {
+  position: relative;
   padding-top: 30px;
   font-family: $font-text;
   font-style: normal;
   font-weight: 500;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    border: 1px solid #f6f5f4;
+    left: 0;
+    top: 115px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    border: 1px solid #f6f5f4;
+    left: 0;
+    top: 166px;
+  }
 }
+
+.header-cart {
+
+  &::after {
+    top: 176px;
+  }
+}
+
 .container {
   max-width: 1366px;
   padding: 0 98px;
@@ -221,6 +250,10 @@ h1 {
 @media (max-width: $tablet-width) {
   .header {
     margin-top: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .header-bg {
@@ -446,11 +479,19 @@ h1 {
 
 @media (max-width: $mobile-width) {
   .header {
+    padding-top: 19px;
   }
   .container {
+    min-width: 320px;
   }
   .header__top {
+    margin-bottom: 17px;
   }
+
+  .header__top form {
+    top: 84px;
+  }
+
   .header__top-toggle {
   }
   .header__top-burger {
@@ -458,6 +499,7 @@ h1 {
   .header__personal {
   }
   .header__login {
+    top: 598px;
   }
   .header__cart {
   }
@@ -468,10 +510,12 @@ h1 {
   .header__menu {
   }
   .header__menu-list {
+    margin-top: 89px;
   }
   .header__menu-item {
   }
   .header__hidden-list {
+    margin: 18px 0 104px;
   }
   .header__hidden-item {
   }
@@ -479,15 +523,45 @@ h1 {
     background: url("../img/header_bg_mobile@1x.jpg") center no-repeat;
     background-size: cover;
     height: 463px;
+    padding-top: 189px;
+  }
+
+  .header__image-catalog {
+    text-align: center;
+    height: 261px;
+    padding-top: 78px;
+    background: url("../img/header_bgCat_mobile@1x.jpg") center no-repeat;
+    background-size: cover;
   }
 
   .header__image h2 {
     font-size: 38px;
     line-height: 49px;
+    margin-left: 3px;
   }
 
   .header__image p {
     font-size: 34px;
     line-height: 44px;
+    margin-left: 0;
+  }
+
+  .header__image-catalog h2 {
+    font-size: 34px;
+    line-height: 44px;
+    margin-left: 0;
+    margin-bottom: 3px;
+  }
+
+  .header__image-catalog p {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__logo {
+    width: 52px;
+    height: 52px;
   }
 }
