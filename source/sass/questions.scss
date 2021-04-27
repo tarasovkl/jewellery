@@ -75,17 +75,26 @@
 
 @media (max-width: $tablet-width) {
   .questions {
+    margin-top: 70px;
   }
   .questions__list {
     width: 100%;
+    margin-bottom: 74px;
   }
   .questions__button {
   }
   .questions__button--active {
   }
 
+  .questions__list-item {
+    padding-left: 48px;
+  }
+
   .questions__list-item p {
+    margin-top: 34px;
+    margin-bottom: 44px;
     width: 85%;
+    padding-left: 0;
   }
 }
 

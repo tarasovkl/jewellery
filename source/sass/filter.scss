@@ -182,10 +182,16 @@
   .container {
   }
   .container-catalog {
+    margin-top: 50px;
   }
   .filter {
     margin: 0 auto;
   }
+
+.filter--disable form{
+  display: none;
+}
+
   .filter form {
     width: 423px;
     margin: 0 auto;
@@ -196,7 +202,7 @@
     display: block;
     width: 100%;
     padding: 0;
-    height: 56px;
+    height: 68px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -206,6 +212,7 @@
     background: #a87b62;
     border: none;
     margin-bottom: 50px;
+    cursor: pointer;
   }
 
   .filter__title {

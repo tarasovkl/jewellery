@@ -124,11 +124,16 @@
 
 @media (max-width: $tablet-width) {
   .blog {
+    margin-top: 65px;
   }
   .blog__read {
   }
   .blog__content {
     flex-direction: column;
+  }
+
+  .blog__content picture {
+    max-height: 300px;
   }
 
   .blog__content img {
@@ -137,7 +142,9 @@
   }
 
   .blog__left {
+    margin-right: 0;
   }
+
   .blog__left-content {
     margin-bottom: 50px;
 

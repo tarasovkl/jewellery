@@ -1,4 +1,5 @@
 .modal-cart {
+  display: none;
   min-width: 500px;
   min-height: 439px;
   box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
@@ -7,13 +8,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
   flex-direction: column;
   padding: 0 35px;
   font-family: $font-text;
   font-style: normal;
   background: #ffffff;
   color: #1d1613;
+}
+
+.modal-cart--active {
+  display: flex;
 }
 
 .modal-cart h2 {
@@ -136,7 +140,7 @@
   max-height: 68px;
 
   &:last-child {
-    background: #A87B62;
+    background: #a87b62;
     color: #ffffff;
   }
 }
