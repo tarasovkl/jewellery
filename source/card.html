@@ -27,7 +27,7 @@
             <button type="submit"><svg class="header__top-search" width="14" height="14">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg></button>
-            <label for=""></label>
+            <label for="search"></label>
             <input type="search" name="search" id="search" placeholder="Type here to search">
           </form>
         </div>
@@ -142,7 +142,7 @@
               <p class="card__data-specs">18” / 20”</p>
             </li>
           </ul>
-          <a href="#" class="card__add">Add to cart</a>
+          <a href="modalcart.html" class="card__add">Add to cart</a>
           <ul class="card__delivery">
             <li>14 Day Returns</li>
             <li>2-Year Warranty</li>
@@ -152,42 +152,34 @@
     </section>
     <section class="new">
       <div class="new__menu new__menu-card">
-        <button class="new__button new__button-left"></button>
+        <button class="new__button new__button-left">Назад</button>
         <div class="new__menu-title">
           <h3>You May Also Like</h3>
           <a href="#">Shop Now</a>
         </div>
-        <button class="new__button new__button-right"></button>
+        <button class="new__button new__button-right">Вперед</button>
       </div>
       <ul class="new__list">
-        <a href="">
-          <li class="new__list-item">
+          <li class="new__list-item"><a href="">
             <img src="img/item1_desktop@1x.jpg" width="270" height="284" alt="Изображение ожерелья">
             <p>Necklace with amethyst</p>
             <span>$ 145</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item">
+          </a></li>
+          <li class="new__list-item"><a href="#">
             <img src="img/item2_desktop@1x.jpg" width="270" height="284" alt="Изображение чокера">
             <p>Layered сhoker</p>
             <span>$ 115</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item">
+          </a></li>
+          <li class="new__list-item"><a href="#">
             <img src="img/item3_desktop@1x.jpg" width="270" height="284" alt="Изображение цепочки">
             <p>Gold chain</p>
             <span>$ 215</span>
-          </li>
-        </a>
-        <a href="">
-          <li class="new__list-item">
+          </a></li>
+          <li class="new__list-item"><a href="#">
             <img src="img/item4_desktop@1x.jpg" width="270" height="284" alt="Изображение серег">
             <p>Galaxy earrings</p>
             <span>$ 95</span>
-          </li>
-        </a>
+          </a></li>
       </ul>
       <div class="new__counter">
         <span class="new__counter-number">1</span>
@@ -206,8 +198,8 @@
         <h3>The good stuff in your inbox </h3>
         <p>News and updates from CH. No spam, we promise.</p>
         <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-          <label for=""></label>
-          <input type="email" name="" id="" placeholder="Your E-mail">
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="Your E-mail">
           <button type="submit">Sign Up</button>
         </form>
       </div>
@@ -268,6 +260,24 @@
       <a href="catalog.html">Continue shopping</a>
       <a href="cart.html">Checkout</a>
     </div>
+  </div>
+  <div class="login">
+    <button class="login__close">Закрыть</button>
+    <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+      <h2>Log In</h2>
+      <label for="mail">Email</label>
+      <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        placeholder="Your E-mail" required>
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" pattern="[A-Za-z0-9_]{1,15}" placeholder="Password" required>
+      <a href="#">Forgot your password?</a>
+      <button type="submit">Log In</button>
+      <div class="login__wrapper">
+        <p>Don’t have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
+    </form>
+    <div class="overlay-login"></div>
   </div>
   <script src="js/main.js"></script>
 </body>

@@ -29,7 +29,7 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 0px;
+    height: 0;
     border: 1px solid #a87b62;
     top: 25px;
     left: 0;
@@ -49,16 +49,14 @@
   justify-content: space-between;
   margin-right: 30px;
   min-height: 630px;
-
-  @media (max-width: 1365px) {
-
-  }
 }
+
 .blog__left-content {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
 }
+
 .blog__card {
   width: 285px;
   height: 300px;
@@ -100,7 +98,7 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 0px;
+    height: 0;
     border: 1px solid #a87b62;
     top: 25px;
     left: 0;
@@ -126,8 +124,7 @@
   .blog {
     margin-top: 65px;
   }
-  .blog__read {
-  }
+
   .blog__content {
     flex-direction: column;
   }
@@ -147,18 +144,19 @@
 
   .blog__left-content {
     margin-bottom: 50px;
-
-    margin-bottom: 50px;
   }
+
   .blog__card {
     width: 339px;
     flex-grow: 1;
   }
+
   .blog__right {
     display: flex;
     justify-content: flex-start;
     margin-top: 0;
   }
+
   .blog__card-move {
     position: initial;
   }
@@ -167,10 +165,8 @@
 @media (max-width: $mobile-width) {
   .blog {
     margin-top: 56px;
+  }
 
-  }
-  .blog__read {
-  }
   .blog__content {
     margin-top: 55px;
   }
@@ -188,11 +184,13 @@
     justify-content: center;
     align-items: center;
   }
+
   .blog__left-content {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
   }
+
   .blog__card {
     width: 290px;
     height: 256px;
@@ -216,6 +214,7 @@
   .blog__right {
     flex-direction: column;
   }
+
   .blog__card-move {
     padding-top: 64px;
   }

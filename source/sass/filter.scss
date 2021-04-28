@@ -1,5 +1,9 @@
 .filter {
-  margin-right: 50px;
+  margin-right: 40px;
+
+  @media (max-width: 1070px) {
+    margin-right: 10px;
+  }
 }
 
 .filter [type="checkbox"] {
@@ -11,6 +15,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 1070px) {
+    min-width: 230px;
+    max-width: 230px;
+  }
 }
 
 .filter ul {
@@ -119,21 +128,24 @@
 }
 
 .filter__scale {
-  width: 200px;
-  height: 0px;
+  width: 198px;
+  height: 0;
   border: 1px solid #f0eae4;
 }
+
 .filter__bar {
   width: 90px;
   height: 0px;
   border: 1px solid #a87b62;
   margin-left: 30%;
 }
+
 .filter__toggle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: #a87b62;
+  font-size: 0;
 }
 
 .filter__controls {
@@ -146,6 +158,7 @@
   left: 45px;
   top: -6px;
 }
+
 .filter__toggle--max {
   position: absolute;
   left: 149px;
@@ -159,7 +172,6 @@
 }
 
 .filter__price span {
-
   &:last-child {
     margin-left: 67px;
   }
@@ -179,21 +191,17 @@
 }
 
 @media (max-width: $tablet-width) {
-  .container {
-  }
-  .container-catalog {
-    margin-top: 50px;
-  }
-
   .filter {
     margin: 0 auto;
   }
 
-.filter--disable form{
-  display: none;
-}
+  .filter--disable form {
+    display: none;
+  }
 
   .filter form {
+    max-width: none;
+    min-width: none;
     width: 423px;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -213,6 +221,7 @@
     background: #a87b62;
     border: none;
     margin-bottom: 50px;
+    margin-top: 50px;
     cursor: pointer;
   }
 
@@ -241,10 +250,17 @@
 @media (max-width: $tablet-width) {
   .filter {
   }
+
+  .container-catalog {
+    margin-top: 50px;
+  }
+
   .filter--disable {
   }
+
   .filter__open {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
   .filter__title {
   }
@@ -270,9 +286,45 @@
   }
   .filter__price {
   }
+}
 
+@media (max-width: $mobile-width) {
   .container-catalog {
     margin-top: 40px;
   }
 
+  .filter {
+  }
+
+  .filter--disable {
+  }
+
+  .filter__open {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .filter__title {
+  }
+  .filter__button {
+  }
+  .filter__button--active {
+  }
+  .filter__options {
+  }
+  .filter__options--active {
+  }
+  .filter__controls {
+  }
+  .filter__scale {
+  }
+  .filter__bar {
+  }
+  .filter__toggle {
+  }
+  .filter__toggle--min {
+  }
+  .filter__toggle--max {
+  }
+  .filter__price {
+  }
 }

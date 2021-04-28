@@ -81,16 +81,19 @@
   .questions {
     margin-top: 70px;
   }
+
   .questions__list {
     width: 100%;
     margin-bottom: 74px;
   }
+
   .questions__button {
     width: 23px;
     height: 12px;
     background: url("../img/arrow_down_mobile.svg") center no-repeat;
     left: calc(100% - 72px);
   }
+
   .questions__button--active {
     background: url("../img/arrow__up_mobile.svg") center no-repeat;
   }
@@ -119,11 +122,10 @@
   .questions__list {
     margin-bottom: 55px;
   }
+
   .questions__button {
     top: 22px;
     left: calc(100% - 45px);
-  }
-  .questions__button--active {
   }
 
   .questions__list-item {
@@ -144,7 +146,6 @@
   }
 
   .questions__list-item p {
-    width: 79%;
     margin-bottom: 23px;
     font-size: 14px;
     line-height: 20px;

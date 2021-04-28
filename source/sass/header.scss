@@ -1,6 +1,7 @@
 h1 {
   display: none;
 }
+
 .header {
   position: relative;
   padding-top: 30px;
@@ -26,13 +27,18 @@ h1 {
     border: 1px solid #f6f5f4;
     left: 0;
     top: 166px;
+    display: none;
   }
 }
 
-.header-cart {
+.body__overflow {
+  overflow-y: hidden;
+}
 
+.header-cart {
   &::after {
     top: 176px;
+    display: block;
   }
 }
 
@@ -40,7 +46,6 @@ h1 {
   max-width: 1366px;
   padding: 0 98px;
   margin: 0 auto;
-  min-width: 320px;
 }
 
 .container-catalog {
@@ -115,6 +120,7 @@ h1 {
     opacity: 0.5;
   }
 }
+
 .header__cart {
   &:hover {
     opacity: 0.5;
@@ -125,8 +131,6 @@ h1 {
   margin-right: 7px;
 }
 
-.header__cart-counter {
-}
 .header__menu {
   min-height: 61px;
   margin: 0 auto;
@@ -136,6 +140,7 @@ h1 {
   font-weight: 500;
   font-size: 16px;
 }
+
 .header__menu-list {
   margin: 0;
   padding: 0;
@@ -145,6 +150,7 @@ h1 {
   flex-wrap: wrap;
   padding-left: 43px;
 }
+
 .header__menu-item {
   color: $text-color;
   font-size: 16px;
@@ -165,9 +171,15 @@ h1 {
   height: 463px;
   background: url("../img/header_bg_desktop@1x.jpg") center no-repeat;
   background-size: cover;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   padding-top: 182px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/header_bg_desktop@2x.jpg") center no-repeat;
+    background-size: 1366px auto;
+    height: 463px;
+  }
 }
 
 .header__image-catalog {
@@ -175,6 +187,12 @@ h1 {
   padding-top: 92px;
   background: url("../img/header_bgCat_desktop@1x.jpg") center no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/header_bgCat_desktop@2x.jpg") center no-repeat;
+    background-size: 1366px auto;
+    height: 261px;
+  }
 }
 
 .header__image h2 {
@@ -256,6 +274,12 @@ h1 {
     }
   }
 
+  .header-cart {
+    &::after {
+      display: none;
+    }
+  }
+
   .header-bg {
     background-color: #a87b62;
   }
@@ -263,11 +287,13 @@ h1 {
   .container {
     padding: 0 45px;
   }
+
   .header__top {
     position: relative;
     align-items: center;
     margin-bottom: 26px;
   }
+
   .header__personal {
     min-width: 18px;
     padding-top: 0;
@@ -339,6 +365,7 @@ h1 {
   .header__cart-counter {
     display: none;
   }
+
   .header__menu {
     display: none;
   }
@@ -389,11 +416,23 @@ h1 {
   .header__image {
     background: url("../img/header_bg_tabtet@1x.jpg") center no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/header_bg_tabtet@2x.jpg") center no-repeat;
+      background-size: 768px auto;
+      height: 463px;
+    }
   }
 
   .header__image-catalog {
     background: url("../img/header_bgCat_tablet@1x.jpg") center no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/header_bgCat_tablet@2x.jpg") center no-repeat;
+      background-size: 768px auto;
+      height: 261px;
+    }
   }
 
   .header__image h2 {
@@ -445,9 +484,6 @@ h1 {
     padding-top: 0;
   }
 
-  .header__top svg {
-  }
-
   .header__top button {
     margin-top: -5px;
   }
@@ -481,9 +517,13 @@ h1 {
   .header {
     padding-top: 19px;
   }
+
   .container {
-    min-width: 320px;
+    min-width: 290px;
+    padding: 0 15px;
+    margin: 0 auto;
   }
+
   .header__top {
     margin-bottom: 17px;
   }
@@ -492,38 +532,29 @@ h1 {
     top: 84px;
   }
 
-  .header__top-toggle {
-  }
-  .header__top-burger {
-  }
-  .header__personal {
-  }
   .header__login {
     top: 598px;
   }
-  .header__cart {
-  }
-  .header__cart-text {
-  }
-  .header__cart-counter {
-  }
-  .header__menu {
-  }
+
   .header__menu-list {
     margin-top: 89px;
   }
-  .header__menu-item {
-  }
+
   .header__hidden-list {
     margin: 18px 0 104px;
   }
-  .header__hidden-item {
-  }
+
   .header__image {
     background: url("../img/header_bg_mobile@1x.jpg") center no-repeat;
     background-size: cover;
     height: 463px;
     padding-top: 189px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat;
+      background-size: 320px cover;
+      height: 463px;
+    }
   }
 
   .header__image-catalog {
@@ -532,6 +563,12 @@ h1 {
     padding-top: 78px;
     background: url("../img/header_bgCat_mobile@1x.jpg") center no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat;
+      background-size: 320px cover;
+      height: 261px;
+    }
   }
 
   .header__image h2 {
