@@ -27,11 +27,8 @@
   var loginEmail = loginForm.querySelector("[name=mail]");
   var isStorageSupport = true;
   var storage = "";
-  var loginOverlay = loginForm.querySelector(".overlay-login");
   var body = document.querySelector("body")
   var mediaTablet = window.matchMedia('(max-width: 1023px');
-
-
 
   try {
     storage = localStorage.getItem("email");
@@ -50,8 +47,6 @@
   var addClass = function (element, selector) {
     element.classList.add(selector);
   };
-
-
 
   if (filter) {
     if (mediaTablet.matches) {
@@ -149,10 +144,6 @@
         }
       }
     });
-
-    if (loginForm.classList.contains("login--active")) {
-
-    }
   };
 
   if (modalCart) {
@@ -180,7 +171,36 @@
     });
   }
 
-
+  $(document).ready(function () {
+    $('.new__list').slick({
+      dots: true,
+      customPaging: function(slider, i) {return '<a>'+(i+1)+'</a>'},
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      variableWidth: true,
+      prevArrow: ".new__button-left",
+      nextArrow: ".new__button-right",
+      responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            customPaging: function(slider, i) {return '<p>'+(i+1)+(" of 6")+'</p>'},
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: false
+          }
+        }
+      ]
+    });
+  });
 
 })();
 
