@@ -29,6 +29,8 @@
   var storage = "";
   var loginOverlay = loginForm.querySelector(".overlay-login");
   var body = document.querySelector("body")
+  var mediaTablet = window.matchMedia('(max-width: 1023px');
+
 
 
   try {
@@ -50,131 +52,135 @@
   };
 
 
+
   if (filter) {
+    if (mediaTablet.matches) {
+      addClass(filter, "filter--disable");
+    }
+
     filterOpen.addEventListener("click", function () {
-      removeClass(filter, "filter--disable");
+      toggleClass(filter, "filter--disable");
+    });
+  }
+
+  if (questionList) {
+    questionTitles.forEach(function (title, i) {
+      title.addEventListener("click", function () {
+        toggleClass(questionTexts[i], "questions__list-text");
+        toggleClass(questionButtons[i], "questions__button--active");
+      });
+    });
+
+    questionButtons.forEach(function (button, i) {
+      button.addEventListener("click", function () {
+        toggleClass(button, "questions__button--active");
+        toggleClass(questionTexts[i], "questions__list-text");
+      });
     });
   }
 
   if (filter) {
-    filterOpen.addEventListener("click", function () {
-      if (filter.classList.contains("filter--disable")) {
-        toggleClass(filter, "filter--disable");
+    filterTitles.forEach(function (title, i) {
+      title.addEventListener("click", function () {
+        toggleClass(filterOptions[i], "filter__options--active");
+        toggleClass(filterButtons[i], "filter__button--active");
+      });
+    });
+
+    filterButtons.forEach(function (button, i) {
+      button.addEventListener("click", function () {
+        toggleClass(button, "filter__button--active");
+        toggleClass(filterOptions[i], "filter__options--active");
+      });
+    });
+  }
+
+  var hideMobileMenu = function () {
+    removeClass(headerSearchForm, "header__form-wrapper--active");
+    removeClass(login, "header__login--active");
+    removeClass(headerMenu, "header__menu--active");
+    removeClass(header, "header-bg");
+    removeClass(menuLogo, "header__logo--active");
+    removeClass(menuIcon, "header__top-burger--active");
+    removeClass(menuCart, "header__cart-image--active");
+  }
+
+  var showMenu = function () {
+    toggleClass(headerSearchForm, "header__form-wrapper--active");
+    toggleClass(login, "header__login--active");
+    toggleClass(headerMenu, "header__menu--active");
+    toggleClass(header, "header-bg");
+    toggleClass(menuLogo, "header__logo--active");
+    toggleClass(menuIcon, "header__top-burger--active");
+    toggleClass(menuCart, "header__cart-image--active");
+    toggleClass(menuSearch, "header__form-wrapper--active");
+  }
+
+  hideMobileMenu();
+
+  menuButton.addEventListener("click", function () {
+    showMenu();
+  })
+
+  if (login) {
+    login.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      addClass(loginForm, "login--active");
+      if (storage) {
+        loginEmail.value = localStorage.getItem("email");
+      }
+      loginEmail.focus();
+      addClass(body, "body__overflow");
+    });
+  }
+
+  if (loginClose) {
+    loginClose.addEventListener("click", function () {
+      removeClass(loginForm, "login--active");
+      removeClass(body, "body__overflow");
+    });
+
+    document.addEventListener("keydown", function (evt) {
+      if (evt.key === "Escape") {
+        evt.preventDefault();
+        if (loginForm.classList.contains("login--active")) {
+          removeClass(loginForm, "login--active");
+          removeClass(body, "body__overflow");
+        }
+      }
+    });
+
+    if (loginForm.classList.contains("login--active")) {
+
+    }
+  };
+
+  if (modalCart) {
+    addButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      addClass(modalCart, "modal-cart--active");
+      addClass(body, "body__overflow");
+    });
+  }
+
+  if (modalCartClose) {
+    modalCartClose.addEventListener("click", function () {
+      removeClass(modalCart, "modal-cart--active");
+      removeClass(body, "body__overflow");
+    });
+
+    document.addEventListener("keydown", function (evt) {
+      if (evt.key === "Escape") {
+        evt.preventDefault();
+        if (modalCart.classList.contains("modal-cart--active")) {
+          removeClass(modalCart, "modal-cart--active");
+          removeClass(body, "body__overflow");
+        }
       }
     });
   }
 
-    if (questionList) {
-      questionTitles.forEach(function (title, i) {
-        title.addEventListener("click", function () {
-          toggleClass(questionTexts[i], "questions__list-text");
-          toggleClass(questionButtons[i], "questions__button--active");
-        });
-      });
 
-      questionButtons.forEach(function (button, i) {
-        button.addEventListener("click", function () {
-          toggleClass(button, "questions__button--active");
-          toggleClass(questionTexts[i], "questions__list-text");
-        });
-      });
-    }
 
-    if (filter) {
-      filterTitles.forEach(function (title, i) {
-        title.addEventListener("click", function () {
-          toggleClass(filterOptions[i], "filter__options--active");
-          toggleClass(filterButtons[i], "filter__button--active");
-        });
-      });
-
-      filterButtons.forEach(function (button, i) {
-        button.addEventListener("click", function () {
-          toggleClass(button, "filter__button--active");
-          toggleClass(filterOptions[i], "filter__options--active");
-        });
-      });
-    }
-
-    var hideMobileMenu = function () {
-      removeClass(headerSearchForm, "header__form-wrapper--active");
-      removeClass(login, "header__login--active");
-      removeClass(headerMenu, "header__menu--active");
-      removeClass(header, "header-bg");
-      removeClass(menuLogo, "header__logo--active");
-      removeClass(menuIcon, "header__top-burger--active");
-      removeClass(menuCart, "header__cart-image--active");
-    }
-
-    var showMenu = function () {
-      toggleClass(headerSearchForm, "header__form-wrapper--active");
-      toggleClass(login, "header__login--active");
-      toggleClass(headerMenu, "header__menu--active");
-      toggleClass(header, "header-bg");
-      toggleClass(menuLogo, "header__logo--active");
-      toggleClass(menuIcon, "header__top-burger--active");
-      toggleClass(menuCart, "header__cart-image--active");
-      toggleClass(menuSearch, "header__form-wrapper--active");
-    }
-
-    hideMobileMenu();
-
-    menuButton.addEventListener("click", function () {
-      showMenu();
-    })
-
-    if (login) {
-      login.addEventListener("click", function () {
-        addClass(loginForm, "login--active");
-        if (storage) {
-          loginEmail.value = localStorage.getItem("email");
-        }
-        loginEmail.focus();
-        addClass(body, "body__overflow");
-      });
-    }
-
-    if (loginClose) {
-      loginClose.addEventListener("click", function () {
-        removeClass(loginForm, "login--active");
-        removeClass(body, "body__overflow");
-      });
-
-      document.addEventListener("keydown", function (evt) {
-        if (evt.key === "Escape") {
-          evt.preventDefault();
-          if (login.classList.contains("login--active")) {
-            removeClass(loginForm, "login--active");
-            removeClass(body, "body__overflow");
-          }
-        }
-      });
-    };
-
-    if (modalCart) {
-      addButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        addClass(modalCart, "modal-cart--active");
-        addClass(body, "body__overflow");
-      });
-    }
-
-    if (modalCartClose) {
-      modalCartClose.addEventListener("click", function () {
-        removeClass(modalCart, "modal-cart--active");
-        removeClass(body, "body__overflow");
-      });
-
-      document.addEventListener("keydown", function (evt) {
-        if (evt.key === "Escape") {
-          evt.preventDefault();
-          if (modalCart.classList.contains("modal-cart--active")) {
-            removeClass(modalCart, "modal-cart--active");
-            removeClass(body, "body__overflow");
-          }
-        }
-      });
-    }
-
-  }) ();
+})();
 

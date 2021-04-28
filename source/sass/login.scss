@@ -4,7 +4,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
 }
 
 .login form {
@@ -119,4 +119,36 @@
   z-index: -1;
   top: -500vh;
   left: -500vh;
+}
+
+@media (max-width: $tablet-width) {
+  .login form {
+    min-width: 430px;
+    padding: 0 51px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .login form {
+    min-width: 270px;
+    padding: 0 15px;
+    background: url("../img/login_bg_mobile@1x.jpg") top no-repeat, #f0eae4;
+    min-height: 470px;
+  }
+
+  .login__close {
+    left: 245px;
+  }
+
+  .login h2 {
+    margin-top: 121px;
+  }
+
+  .login__wrapper {
+    margin-top: 12px;
+  }
+
+  .login button[type="submit"] {
+    margin-top: 20px;
+  }
 }

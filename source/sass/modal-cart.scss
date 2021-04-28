@@ -7,7 +7,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   flex-direction: column;
   padding: 0 35px;
   font-family: $font-text;
@@ -144,5 +144,43 @@
   &:last-child {
     background: #a87b62;
     color: #ffffff;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .modal-cart {
+    min-width: 290px;
+    max-width: 290px;
+    padding: 0 7px;
+  }
+
+  .modal-cart__close {
+    left: 260px;
+  }
+
+  .modal-cart__total p {
+    width: 40%;
+  }
+
+  .modal-cart__buttons a:last-child {
+    background: #a87b62;
+    color: #ffffff;
+  }
+
+  .modal-cart__buttons a {
+    padding: 10px 0;
+    width: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-cart__total {
+    margin-bottom: 0;
+
+    &::after {
+      width: 273px;
+      left: 0;
+    }
   }
 }
