@@ -113,7 +113,7 @@
 
 .slick-disabled {
   opacity: 0.2;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 .new__list-catalog {
@@ -236,6 +236,13 @@
   display: none;
 }
 
+.new__menu-slider {
+  @media (max-width: 1382px) {
+    margin: 0 auto;
+    width: 870px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .new {
     margin: 0 auto;
@@ -248,6 +255,10 @@
 
   .new__menu-card {
     margin-top: 64px;
+  }
+
+  .new__menu-slider {
+    width: auto;
   }
 
   .new__list {
