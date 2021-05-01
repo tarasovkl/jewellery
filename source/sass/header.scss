@@ -99,7 +99,7 @@ h1 {
   }
 
   &:focus {
-    outline: none;
+    outline: 1px solid #9b9997;
   }
 }
 
@@ -136,7 +136,7 @@ h1 {
 .header__menu {
   min-height: 61px;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 19px;
   min-width: 493px;
   font-style: normal;
   font-weight: 500;
@@ -171,14 +171,13 @@ h1 {
 
 .header__image {
   height: 463px;
-  background: url("../img/header_bg_desktop@1x.jpg") center no-repeat;
+  background: url("../img/header_bg_desktop@1x.jpg") center no-repeat #a87b62;
   background-size: cover;
   text-align: center;
   padding-top: 182px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url("../img/header_bg_desktop@2x.jpg") center no-repeat;
-    background-size: 1366px auto;
+    background: url("../img/header_bg_desktop@2x.jpg") center no-repeat #a87b62;
     height: 463px;
   }
 }
@@ -186,12 +185,11 @@ h1 {
 .header__image-catalog {
   height: 261px;
   padding-top: 92px;
-  background: url("../img/header_bgCat_desktop@1x.jpg") center no-repeat;
+  background: url("../img/header_bgCat_desktop@1x.jpg") center no-repeat #a87b62;
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url("../img/header_bgCat_desktop@2x.jpg") center no-repeat;
-    background-size: 1366px auto;
+    background: url("../img/header_bgCat_desktop@2x.jpg") center no-repeat #a87b62;
     height: 261px;
   }
 }
@@ -283,9 +281,11 @@ h1 {
 
   .header-bg {
     background-color: #a87b62;
+    min-width: 320px;
   }
 
   .container {
+    width: auto;
     padding: 0 45px;
   }
 
@@ -400,6 +400,10 @@ h1 {
     margin-bottom: 140px;
   }
 
+  .header__hidden-list--card {
+    padding-bottom: 182px;
+  }
+
   .header__hidden-list li {
     margin-bottom: 20px;
   }
@@ -415,23 +419,23 @@ h1 {
   }
 
   .header__image {
-    background: url("../img/header_bg_tabtet@1x.jpg") center no-repeat;
+    background: url("../img/header_bg_tabtet@1x.jpg") center no-repeat #a87b62;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/header_bg_tabtet@2x.jpg") center no-repeat;
-      background-size: 768px auto;
+      background: url("../img/header_bg_tabtet@2x.jpg") center no-repeat #a87b62;
+      background-size: 768px;
       height: 463px;
     }
   }
 
   .header__image-catalog {
-    background: url("../img/header_bgCat_tablet@1x.jpg") center no-repeat;
+    background: url("../img/header_bgCat_tablet@1x.jpg") center no-repeat #a87b62;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/header_bgCat_tablet@2x.jpg") center no-repeat;
-      background-size: 768px auto;
+      background: url("../img/header_bgCat_tablet@2x.jpg") center no-repeat #a87b62;
+      background-size: 768px;
       height: 261px;
     }
   }
@@ -515,14 +519,19 @@ h1 {
 }
 
 @media (max-width: $mobile-width) {
+body {
+  overflow-x: hidden;
+}
+
   .header {
     padding-top: 19px;
   }
 
   .container {
-    min-width: 290px;
+    min-width: 320px;
     padding: 0 15px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 
   .header__top {
@@ -546,14 +555,14 @@ h1 {
   }
 
   .header__image {
-    background: url("../img/header_bg_mobile@1x.jpg") center no-repeat;
+    background: url("../img/header_bg_mobile@1x.jpg") center no-repeat #a87b62;
     background-size: cover;
     height: 463px;
     padding-top: 189px;
+    min-width: 320px;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat;
-      background-size: 320px cover;
+      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat #a87b62;
       height: 463px;
     }
   }
@@ -562,12 +571,11 @@ h1 {
     text-align: center;
     height: 261px;
     padding-top: 78px;
-    background: url("../img/header_bgCat_mobile@1x.jpg") center no-repeat;
+    background: url("../img/header_bgCat_mobile@1x.jpg") center no-repeat #a87b62;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat;
-      background-size: 320px cover;
+      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat #a87b62;
       height: 261px;
     }
   }

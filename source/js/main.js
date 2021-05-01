@@ -29,6 +29,9 @@
   var storage = "";
   var body = document.querySelector("body")
   var mediaTablet = window.matchMedia('(max-width: 1023px');
+  var mainSlider = document.querySelector(".new__menu-slider");
+  var loginOverlay = document.querySelector(".overlay");
+  var pageMask = document.querySelector(".mask");
 
   try {
     storage = localStorage.getItem("email");
@@ -126,24 +129,37 @@
       }
       loginEmail.focus();
       addClass(body, "body__overflow");
+      addClass(pageMask, "mask-active");
+      addClass(loginOverlay, "overlay-active");
     });
+  }
+
+  var closeLogin = function () {
+    removeClass(loginForm, "login--active");
+    removeClass(body, "body__overflow");
+    removeClass(pageMask, "mask-active");
+    removeClass(loginOverlay, "overlay-active");
   }
 
   if (loginClose) {
     loginClose.addEventListener("click", function () {
-      removeClass(loginForm, "login--active");
-      removeClass(body, "body__overflow");
+      closeLogin();
     });
 
     document.addEventListener("keydown", function (evt) {
       if (evt.key === "Escape") {
         evt.preventDefault();
         if (loginForm.classList.contains("login--active")) {
-          removeClass(loginForm, "login--active");
-          removeClass(body, "body__overflow");
+          closeLogin();
         }
       }
     });
+
+    window.onclick = function (evt) {
+      if (evt.target == loginOverlay) {
+        closeLogin();
+      }
+    }
   };
 
   if (modalCart) {
@@ -151,56 +167,72 @@
       evt.preventDefault();
       addClass(modalCart, "modal-cart--active");
       addClass(body, "body__overflow");
+      addClass(pageMask, "mask-active");
+      addClass(loginOverlay, "overlay-active");
     });
+  }
+
+  var closeCart = function () {
+    removeClass(modalCart, "modal-cart--active");
+    removeClass(body, "body__overflow");
+    removeClass(pageMask, "mask-active");
+    removeClass(loginOverlay, "overlay-active");
   }
 
   if (modalCartClose) {
     modalCartClose.addEventListener("click", function () {
-      removeClass(modalCart, "modal-cart--active");
-      removeClass(body, "body__overflow");
+      closeCart();
     });
 
     document.addEventListener("keydown", function (evt) {
       if (evt.key === "Escape") {
         evt.preventDefault();
         if (modalCart.classList.contains("modal-cart--active")) {
-          removeClass(modalCart, "modal-cart--active");
-          removeClass(body, "body__overflow");
+          closeCart();
         }
       }
     });
+
+    window.onclick = function (evt) {
+      if (evt.target == loginOverlay) {
+        closeCart();
+        removeClass(loginForm, "login--active");
+      }
+    }
   }
 
-  $(document).ready(function () {
-    $('.new__list').slick({
-      dots: true,
-      customPaging: function(slider, i) {return '<a>'+(i+1)+'</a>'},
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      variableWidth: true,
-      prevArrow: ".new__button-left",
-      nextArrow: ".new__button-right",
-      responsive: [
-        {
-          breakpoint: 1023,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+  if (mainSlider) {
+    $(document).ready(function () {
+      $('.new__list').slick({
+        dots: true,
+        customPaging: function (slider, i) { return '<a>' + (i + 1) + '</a>' },
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        variableWidth: true,
+        prevArrow: ".new__button-left",
+        nextArrow: ".new__button-right",
+        responsive: [
+          {
+            breakpoint: 1023,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              customPaging: function (slider, i) { return '<p>' + (i + 1) + (" of 6") + '</p>' },
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: false
+            }
           }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            customPaging: function(slider, i) {return '<p>'+(i+1)+(" of 6")+'</p>'},
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            arrows: false
-          }
-        }
-      ]
+        ]
+      });
     });
-  });
+  }
 
 })();
 

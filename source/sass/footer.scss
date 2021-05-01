@@ -52,7 +52,7 @@
   border: none;
 
   &:focus {
-    outline: none;
+    outline: 1px solid #9b9997;
   }
 
   &::placeholder {
@@ -156,6 +156,35 @@
   min-width: 49.5%;
 }
 
+.mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mask-active {
+  display: block;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.overlay-active {
+  display: block;
+}
+
+
+
 @media (max-width: $tablet-width) {
   .footer {
     min-height: 446px;
@@ -198,6 +227,7 @@
 @media (max-width: $mobile-width) {
   .footer {
     margin-top: 70px;
+    min-width: 320px;
   }
 
   .footer-card {

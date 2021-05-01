@@ -40,7 +40,7 @@
 </symbol></svg>
   </div>
   <h1 class="main-title">Каталог Jewellery</h1>
-  <header class="header header-bg header-cart">
+  <header class="header header-cart header-bg">
     <div class="container">
       <div class="header__top">
         <div class="header__form-wrapper">
@@ -73,7 +73,7 @@
           <li><a href="#" class="header__menu-item">Rings</a></li>
           <li><a href="#" class="header__menu-item">Earrings</a></li>
         </ul>
-        <ul class="header__hidden-list">
+        <ul class="header__hidden-list header__hidden-list--card">
           <li><a href="#" class="header__hidden-item">About CH</a></li>
           <li><a href="#" class="header__hidden-item">Stores & Hours</a></li>
           <li><a href="#" class="header__hidden-item">Contact Us</a></li>
@@ -398,45 +398,48 @@
       </div>
     </div>
   </footer>
-  <div class="modal-cart">
-    <button class="modal-cart__close">Закрыть</button>
-    <h2>The item was added to your cart</h2>
-    <div class="modal-cart__item">
-      <img src="img/cart_item1_desktop@1x.jpg" width="84" height="79" alt="Контентное изображение">
-      <div class="modal-cart__title">
-        <h3>Gold Necklace </h3>
-        <p>$ 115</p>
+  <div class="mask"></div>
+  <div class="overlay">
+    <div class="modal-cart">
+      <button class="modal-cart__close">Закрыть</button>
+      <h2>The item was added to your cart</h2>
+      <div class="modal-cart__item">
+        <img src="img/cart_item1_desktop@1x.jpg" width="84" height="79" alt="Контентное изображение">
+        <div class="modal-cart__title">
+          <h3>Gold Necklace </h3>
+          <p>$ 115</p>
+        </div>
+        <div class="modal-cart__counter">
+          <button>Больше</button>
+          <p>1</p>
+          <button>Меньше</button>
+        </div>
       </div>
-      <div class="modal-cart__counter">
-        <button>Больше</button>
-        <p>1</p>
-        <button>Меньше</button>
+      <div class="modal-cart__total">
+        <p>You have 1 item in the cart</p>
+        <p>Cart subtotal: $ 115</p>
+      </div>
+      <div class="modal-cart__buttons">
+        <a href="catalog.html">Continue shopping</a>
+        <a href="cart.html">Checkout</a>
       </div>
     </div>
-    <div class="modal-cart__total">
-      <p>You have 1 item in the cart</p>
-      <p>Cart subtotal: $ 115</p>
+    <div class="login">
+      <button class="login__close">Закрыть</button>
+      <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+        <h2>Log In</h2>
+        <label for="mail">Email</label>
+        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" pattern="[A-Za-z0-9_]{1,15}" placeholder="Password" required="">
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+        <div class="login__wrapper">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
     </div>
-    <div class="modal-cart__buttons">
-      <a href="catalog.html">Continue shopping</a>
-      <a href="cart.html">Checkout</a>
-    </div>
-  </div>
-  <div class="login">
-    <button class="login__close">Закрыть</button>
-    <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-      <h2>Log In</h2>
-      <label for="mail">Email</label>
-      <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
-      <label for="pass">Password</label>
-      <input type="password" name="pass" id="pass" pattern="[A-Za-z0-9_]{1,15}" placeholder="Password" required="">
-      <a href="#">Forgot your password?</a>
-      <button type="submit">Log In</button>
-      <div class="login__wrapper">
-        <p>Don’t have an account?</p>
-        <a href="#">Sign up</a>
-      </div>
-    </form>
   </div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

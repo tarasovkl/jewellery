@@ -100,6 +100,7 @@
   font-size: 16px;
   line-height: 21px;
   color: #9b9997;
+  cursor: pointer;
 }
 
 .slick-active {
@@ -108,6 +109,11 @@
 
 .slick__dots a {
   color: #9b9997;
+}
+
+.slick-disabled {
+  opacity: 0.2;
+  pointer-events:none;
 }
 
 .new__list-catalog {
@@ -404,6 +410,7 @@
 
   .new__list-item--margin {
     width: 133px;
+    margin-right: 0;
   }
 
   .new__list-catitem {
