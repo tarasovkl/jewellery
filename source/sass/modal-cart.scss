@@ -41,6 +41,10 @@
   background: url("../img/close_form.svg") center no-repeat;
   z-index: 10;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .modal-cart__item {
@@ -95,6 +99,10 @@
   &:last-child {
     background: url("../img/icon-minus.svg") center no-repeat;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .modal-cart__total {
@@ -144,6 +152,10 @@
   &:last-child {
     background: #a87b62;
     color: #ffffff;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 

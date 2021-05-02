@@ -68,6 +68,10 @@
   margin-right: 35px;
   color: #9b9997;
   padding: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .card__active {
@@ -130,6 +134,10 @@
   text-align: center;
   padding-top: 24px;
   margin-bottom: 17px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .card__delivery {
@@ -159,7 +167,7 @@
 
 @media (max-width: $tablet-width) {
   .card {
-    margin-top: 56px;
+    margin-top: 60px;
   }
 
   .card__images {
@@ -210,7 +218,7 @@
   .card {
     flex-direction: column;
     align-items: center;
-    margin-top: 17px;
+    margin-top: 0;
   }
 
   .card__images {
