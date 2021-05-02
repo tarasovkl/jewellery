@@ -64,6 +64,7 @@
   var hideText = function () {
     for (var i = 1; i < questionTexts.length; i++) {
       addClass(questionTexts[i], "questions__list-text");
+      removeClass(questionButtons[i], "questions__button--active");
     }
   }
 
