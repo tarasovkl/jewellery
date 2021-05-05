@@ -63,6 +63,15 @@ h1 {
 .header__top-logo {
   margin-left: -66px;
   font-size: 0;
+  cursor: pointer;
+}
+
+.header__logo--disabled {
+  cursor: auto;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .header__top form {
@@ -159,7 +168,7 @@ h1 {
   color: $text-color;
   font-size: 16px;
   line-height: 24px;
-  padding: 18px 0;
+  padding: 7px 0;
   margin-right: 35px;
 
   &:hover {
@@ -168,7 +177,7 @@ h1 {
 }
 
 .header__menu-list li {
-  padding: 18px 0;
+  margin: 18px 0;
 }
 
 .header__image {
@@ -284,6 +293,8 @@ h1 {
   .header-bg {
     background-color: #a87b62;
     min-width: 320px;
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .container {
@@ -385,12 +396,14 @@ h1 {
 
   .header__menu-list li {
     padding: 11px 0;
+    margin: 0;
   }
 
   .header__menu-item {
     font-size: 24px;
     line-height: 36px;
     color: #ffffff;
+    padding: 8px 0;
   }
 
   .header__hidden-list {

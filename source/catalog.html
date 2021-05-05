@@ -63,11 +63,11 @@
         </ul>
       </nav>
     </div>
-    <div class="header__image header__image-catalog">
-      <h2>All Jewellery</h2>
-      <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
-    </div>
   </header>
+  <div class="header__image header__image-catalog">
+    <h2>All Jewellery</h2>
+    <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+  </div>
   <main class="container container-catalog">
     <div class="filter">
       <button class="filter__open">Filter</button>
@@ -92,9 +92,9 @@
           <li>
             <div class="filter__title">
               <p>Material</p>
-              <button class="filter__button" type="button">Показать</button>
+              <button class="filter__button filter__button--active" type="button">Показать</button>
             </div>
-            <div class="filter__options">
+            <div class="filter__options filter__options--active">
               <input type="checkbox" name="option" id="gold" checked>
               <label for="gold">Gold</label>
               <input type="checkbox" name="option" id="silver" checked>
@@ -104,9 +104,9 @@
           <li>
             <div class="filter__title">
               <p>Collection</p>
-              <button class="filter__button" type="button">Показать</button>
+              <button class="filter__button filter__button--active" type="button">Показать</button>
             </div>
-            <div class="filter__options">
+            <div class="filter__options filter__options--active">
               <input type="checkbox" name="option" id="pink" checked>
               <label for="pink">Pink flamingo</label>
               <input type="checkbox" name="option" id="dreams" checked>
@@ -407,7 +407,8 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <label for="email"></label>
-          <input type="email" name="email" id="email" placeholder="Your E-mail">
+          <input type="email" name="email" id="email" placeholder="Your E-mail"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,4}$" required>
           <button type="submit">Sign Up</button>
         </form>
       </div>
@@ -448,11 +449,10 @@
   <div class="mask"></div>
   <div class="overlay">
     <div class="login">
-      <button class="login__close">Закрыть</button>
       <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <h2>Log In</h2>
         <label for="mail">Email</label>
-        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,4}$"
           placeholder="Your E-mail" required>
         <label for="pass">Password</label>
         <input type="password" name="pass" id="pass" pattern="[A-Za-z0-9_]{1,15}" placeholder="Password" required>
@@ -463,6 +463,7 @@
           <a href="#">Sign up</a>
         </div>
       </form>
+      <button class="login__close">Закрыть</button>
     </div>
   </div>
   <script src="js/main.js"></script>

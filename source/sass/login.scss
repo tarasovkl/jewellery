@@ -4,7 +4,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -60%);
 }
 
 .login form {
@@ -20,6 +20,10 @@
   font-size: 14px;
   line-height: 21px;
   background: url("../img/login_bg_desktop@1x.jpg") top no-repeat, #f0eae4;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    border-radius: 10px;
+  }
 }
 
 .login label {
@@ -67,11 +71,13 @@
     margin-left: 10px;
   }
 
-  &:nth-child(n + 3) {
+  &:nth-child(3n) {
     margin-top: -33px;
     text-align: right;
     font-size: 12px;
     line-height: 18px;
+    width: 42%;
+    margin-left: 58%;
   }
 
   &:hover {
@@ -109,11 +115,11 @@
 
 .login__close {
   font-size: 0;
-  width: 14px;
-  height: 14px;
+  width: 54px;
+  height: 54px;
   position: absolute;
-  left: 394px;
-  top: 21px;
+  left: 373px;
+  top: 0;
   border: none;
   background: url("../img/close_form.svg") center no-repeat;
   z-index: 10;
@@ -145,19 +151,32 @@
 }
 
 @media (max-width: $mobile-width) {
+  .login {
+    transform: translate(-50%, -50%);
+  }
+
   .login form {
     min-width: 270px;
     padding: 0 15px;
     background: url("../img/login_bg_mobile@1x.jpg") top no-repeat, #f0eae4;
-    min-height: 470px;
+    min-height: 479px;
   }
 
-  .login__close {
-    left: 245px;
+  .login a {
+    &:nth-child(3n) {
+      width: 59%;
+      margin-left: 41%;
+    }
   }
 
   .login h2 {
+    font-size: 24px;
+    line-height: 31px;
     margin-top: 121px;
+  }
+
+  .login__close {
+    left: 218px;
   }
 
   .login__wrapper {

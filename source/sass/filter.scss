@@ -63,6 +63,7 @@
   padding-left: 32px;
   margin-bottom: 13px;
   position: relative;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -72,6 +73,11 @@
     background-color: #ffffff;
     border: 1px solid #a87b62;
     left: 9px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -81,6 +87,11 @@
   left: 9px;
   border: 1px solid #a87b62;
   background: #a87b62;
+  cursor: pointer;
+}
+
+.filter input:focus + label::before {
+  opacity: 0.7;
 }
 
 .filter__button {

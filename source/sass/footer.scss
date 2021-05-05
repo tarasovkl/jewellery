@@ -50,6 +50,7 @@
   color: #ffffff;
   background-color: #000000;
   border: none;
+  width: 385px;
 
   &:focus {
     outline: 1px solid #9b9997;
@@ -208,6 +209,10 @@
     }
   }
 
+  .footer__form input {
+    width: 450px;
+  }
+
   .footer__content-wrapper {
     min-width: 84.5%;
     margin-top: 0;
@@ -252,8 +257,12 @@
     width: 100%;
 
     &::after {
-      width: 98%;
+      width: 100%;
     }
+  }
+
+  .footer__form input {
+    width: 180px;
   }
 
   .footer__content-wrapper {

@@ -3,7 +3,7 @@
 (function () {
   var questionList = document.querySelector(".questions__list");
   var questionButtons = document.querySelectorAll(".questions__button");
-  var questionTitles = document.querySelectorAll(".questions__list-item h4");
+  var questionItems = document.querySelectorAll(".questions__list-item");
   var questionTexts = document.querySelectorAll(".questions__list-item p");
   var filter = document.querySelector(".filter");
   var filterOpen = document.querySelector(".filter__open");
@@ -69,22 +69,25 @@
   }
 
   if (questionList) {
-    hideText(questionTexts);
+    hideText();
   }
 
+  var hideOptions = function () {
+    for (var i = 1; i < filterOptions.length - 1; i++) {
+      removeClass(filterButtons[i], "filter__button--active");
+      removeClass(filterOptions[i], "filter__options--active");
+    }
+  }
+
+  if (filter) {
+    hideOptions();
+  }
 
   if (questionList) {
-    questionTitles.forEach(function (title, i) {
-      title.addEventListener("click", function () {
+    questionItems.forEach(function (item, i) {
+      item.addEventListener("click", function () {
         toggleClass(questionTexts[i], "questions__list-text");
         toggleClass(questionButtons[i], "questions__button--active");
-      });
-    });
-
-    questionButtons.forEach(function (button, i) {
-      button.addEventListener("click", function () {
-        toggleClass(button, "questions__button--active");
-        toggleClass(questionTexts[i], "questions__list-text");
       });
     });
   }
@@ -124,6 +127,7 @@
     toggleClass(menuIcon, "header__top-burger--active");
     toggleClass(menuCart, "header__cart-image--active");
     toggleClass(menuSearch, "header__form-wrapper--active");
+    toggleClass(body, "body__overflow");
   }
 
   hideMobileMenu();
@@ -139,10 +143,10 @@
       if (storage) {
         loginEmail.value = localStorage.getItem("email");
       }
-      loginEmail.focus();
       addClass(body, "body__overflow");
       addClass(pageMask, "mask-active");
       addClass(loginOverlay, "overlay-active");
+      loginEmail.focus();
     });
   }
 

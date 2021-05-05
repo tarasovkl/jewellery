@@ -16,10 +16,15 @@
 <body>
   <main>
     <div class="modal-cart modal-cart--active">
-      <button class="modal-cart__close">Закрыть</button>
       <h2>The item was added to your cart</h2>
       <div class="modal-cart__item">
-        <img src="img/cart_item1_desktop@1x.jpg" width="84" height="79" alt="Контентное изображение">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/cart_item1_mobile@1x.jpg.webp 1x, img/cart_item1_mobile@2x.jpg.webp 2x">
+          <!-- 1x: 70px; 2x: 140px -->
+          <source media="(max-width: 767px)" srcset="img/cart_item1_mobile@1x.jpg 1x, img/cart_item1_mobile@2x.jpg 2x">
+          <!-- 1x: 88px; 2x: 176px -->
+          <img src="img/cart_item1_desktop@1x.jpg" width="84" height="79" alt="Контентное изображение">
+        </picture>
         <div class="modal-cart__title">
           <h3>Gold Necklace </h3>
           <p>$ 115</p>
@@ -38,6 +43,7 @@
         <a href="catalog.html">Continue shopping</a>
         <a href="cart.html">Checkout</a>
       </div>
+      <button class="modal-cart__close">Закрыть</button>
     </div>
   </main>
 </body>

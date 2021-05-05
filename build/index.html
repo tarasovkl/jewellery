@@ -57,7 +57,7 @@
         <button class="header__top-toggle">Открыть<svg class="header__top-burger header__top-burger--active" width="25" height="16">
             <use xlink:href="img/sprite.svg#icon-burger"></use>
           </svg></button>
-        <a href="#" class="header__top-logo">Логотип<svg class="header__logo header__logo--active" width="66" height="66">
+        <a class="header__top-logo header__logo--disabled">Логотип<svg class="header__logo header__logo--active header__logo--disabled" width="66" height="66">
             <use xlink:href="img/sprite.svg#icon-logoDesktop"></use>
           </svg></a>
         <div class="header__personal">
@@ -82,11 +82,11 @@
         </ul>
       </nav>
     </div>
-    <div class="header__image">
-      <h2>Perfection</h2>
-      <p>made to be yours</p>
-    </div>
   </header>
+  <div class="header__image">
+    <h2>Perfection</h2>
+    <p>made to be yours</p>
+  </div>
   <main class="container">
     <section class="new">
       <div class="new__menu">
@@ -304,7 +304,7 @@
             </picture>
             <div class="blog__card">
               September 30, 2019
-              <p>How to care for<br> your jewellery</p>
+              <p>How to care for your jewellery</p>
               <a href="">Read Article</a>
             </div>
           </div>
@@ -351,27 +351,27 @@
       <h3>Frequently asked questions</h3>
       <ul class="questions__list">
         <li class="questions__list-item">
-          <h4>What materials are<br> the jewellery made of?</h4>
+          <h4>What materials are the jewellery made of?</h4>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
             semiprecious stones and crystals.</p>
           <button class="questions__button questions__button--active">Показать</button>
         </li>
         <li class="questions__list-item">
-          <h4>Which countries<br> do you deliver to?</h4>
+          <h4>Which countries do you deliver to?</h4>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
             contains precious and
             semiprecious stones and crystals.</p>
           <button class="questions__button questions__button--active">Показать</button>
         </li>
         <li class="questions__list-item">
-          <h4>What are the<br> payment methods?</h4>
+          <h4>What are the payment methods?</h4>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
             contains precious and
             semiprecious stones and crystals.</p>
           <button class="questions__button questions__button--active">Показать</button>
         </li>
         <li class="questions__list-item">
-          <h4>Can I return the<br> jewellery if it didn’t fit me?</h4>
+          <h4>Can I return the jewellery if it didn’t fit me?</h4>
           <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
             contains precious and
             semiprecious stones and crystals.</p>
@@ -472,7 +472,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <label for="email"></label>
-          <input type="email" name="email" id="email" placeholder="Your E-mail">
+          <input type="email" name="email" id="email" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,4}$" required="">
           <button type="submit">Sign Up</button>
         </form>
       </div>
@@ -513,11 +513,10 @@
   <div class="mask"></div>
   <div class="overlay">
     <div class="login">
-      <button class="login__close">Закрыть</button>
       <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <h2>Log In</h2>
         <label for="mail">Email</label>
-        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-mail" required="">
+        <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,4}$" placeholder="Your E-mail" required="">
         <label for="pass">Password</label>
         <input type="password" name="pass" id="pass" pattern="[A-Za-z0-9_]{1,15}" placeholder="Password" required="">
         <a href="#">Forgot your password?</a>
@@ -527,6 +526,7 @@
           <a href="#">Sign up</a>
         </div>
       </form>
+      <button class="login__close">Закрыть</button>
     </div>
   </div>
   <script src="js/vendor.js"></script>
