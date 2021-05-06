@@ -127,7 +127,7 @@
     toggleClass(menuIcon, "header__top-burger--active");
     toggleClass(menuCart, "header__cart-image--active");
     toggleClass(menuSearch, "header__form-wrapper--active");
-    toggleClass(body, "body__overflow");
+    toggleClass(body, "body__overflow--menu");
   }
 
   hideMobileMenu();
