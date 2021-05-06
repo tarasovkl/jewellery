@@ -13,7 +13,7 @@
 
 .footer-card {
   min-height: 313px;
-  margin-top: 124px;
+  margin-top: 119px;
 }
 
 .footer__form {
@@ -116,7 +116,7 @@
   margin-top: 17px;
 
   &:nth-child(4n + 2) {
-    min-width: 160px;
+    min-width: 206px;
   }
 
   &:last-child li {
@@ -158,6 +158,10 @@
   margin-bottom: 73px;
 }
 
+.footer__content-wrapper--card {
+  margin-bottom: 48px;
+}
+
 .mask {
   display: none;
   position: fixed;
@@ -189,7 +193,7 @@
   .footer {
     min-height: 446px;
     padding-top: 44px;
-    margin-top: 73px;
+    margin-top: 69px;
   }
 
   .footer__form {

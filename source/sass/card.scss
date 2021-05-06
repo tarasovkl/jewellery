@@ -206,12 +206,13 @@
   .card__images-block--tablet img {
     width: 97px;
     height: 129px;
+    display: initial;
   }
 
   .card__images-block--left {
     margin-right: 0;
   }
-  
+
   .card__images-block--left picture {
     margin-bottom: 0;
   }
@@ -236,7 +237,7 @@
   }
 
   .card__images {
-    margin-bottom: 46px;
+    margin-bottom: 49px;
     align-items: center;
   }
 
@@ -282,7 +283,7 @@
 
   .card__images-counter {
     position: absolute;
-    left: 141px;
+    left: 127px;
     top: 237px;
     display: block;
     font-family: $font-text;
