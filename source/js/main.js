@@ -229,14 +229,14 @@
         prevArrow: ".new__button-left",
         nextArrow: ".new__button-right",
         responsive: [
-          {
+          /* {
             breakpoint: 1382,
             settings: {
               customPaging: function (slider, i) { return '<a>' + (i + 1) + '</a>' },
               slidesToShow: 3,
               slidesToScroll: 3
             }
-          },
+          }, */
           {
             breakpoint: 1023,
             settings: {

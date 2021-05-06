@@ -190,6 +190,7 @@ h1 {
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: url("../img/header_bg_desktop@2x.jpg") center no-repeat #a87b62;
     height: 463px;
+    background-size: cover;
   }
 }
 
@@ -202,6 +203,7 @@ h1 {
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: url("../img/header_bgCat_desktop@2x.jpg") center no-repeat #a87b62;
     height: 261px;
+    background-size: cover;
   }
 }
 
@@ -439,8 +441,8 @@ h1 {
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url("../img/header_bg_tabtet@2x.jpg") center no-repeat #a87b62;
-      background-size: 768px;
       height: 463px;
+      background-size: cover;
     }
   }
 
@@ -450,8 +452,8 @@ h1 {
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url("../img/header_bgCat_tablet@2x.jpg") center no-repeat #a87b62;
-      background-size: 768px;
       height: 261px;
+      background-size: cover;
     }
   }
 
@@ -583,6 +585,7 @@ h1 {
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url("../img/header_bg_mobile@2x.jpg") center no-repeat #a87b62;
       height: 463px;
+      background-size: cover;
     }
   }
 
@@ -594,8 +597,9 @@ h1 {
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/header_bg_mobile@2x.jpg") center no-repeat #a87b62;
+      background: url("../img/header_bgCat_mobile@2x.jpg") center no-repeat #a87b62;
       height: 261px;
+      background-size: cover;
     }
   }
 
