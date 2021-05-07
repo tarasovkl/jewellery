@@ -1,3 +1,7 @@
+.wrapper {
+  min-height: calc(100vh - 338px);
+}
+
 .footer {
   background-color: #000000;
   min-height: 338px;
@@ -190,6 +194,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .wrapper {
+    min-height: calc(100vh - 446px);
+  }
+
   .footer {
     min-height: 446px;
     padding-top: 44px;
@@ -238,6 +246,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .wrapper {
+    min-height: calc(100vh - 773px);
+  }
+
   .footer {
     margin-top: 70px;
     min-width: 320px;
